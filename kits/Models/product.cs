@@ -27,11 +27,13 @@ namespace kits.Models
         public string product_description { get; set; }
         public Nullable<int> size_ID { get; set; }
         public Nullable<decimal> product_price { get; set; }
+        public Nullable<int> image_ID { get; set; }
     
         public virtual brand brand { get; set; }
         public virtual category category { get; set; }
         public virtual size size { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<product_order> product_order { get; set; }
+        public virtual image image { get; set; }
     }
 }

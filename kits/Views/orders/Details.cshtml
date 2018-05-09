@@ -1,0 +1,34 @@
+﻿@model kits.Models.order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.state.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.state.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.user_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.user_email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.order_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
