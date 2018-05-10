@@ -37,6 +37,7 @@
     <EntitySetMapping Name="products">
       <EntityTypeMapping TypeName="kitsModel.product">
         <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="image_ID" ColumnName="image_ID" />
           <ScalarProperty Name="product_ID" ColumnName="product_ID" />
           <ScalarProperty Name="product_name" ColumnName="product_name" />
           <ScalarProperty Name="brand_ID" ColumnName="brand_ID" />

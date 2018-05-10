@@ -22,6 +22,7 @@
     </Key>
     <Property Name="image_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="imagestring" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="products" Relationship="kitsModel.FK__product__image_I__59063A47" FromRole="image" ToRole="product" />
   </EntityType>
   <EntityType Name="order">
     <Key>
@@ -49,6 +50,8 @@
     <NavigationProperty Name="category" Relationship="Self.FK__product__categor__4CA06362" FromRole="product" ToRole="category" />
     <NavigationProperty Name="size" Relationship="Self.FK__product__size_ID__4D94879B" FromRole="product" ToRole="size" />
     <NavigationProperty Name="product_order" Relationship="Self.FK__product_o__produ__571DF1D5" FromRole="product" ToRole="product_order" />
+    <Property Name="image_ID" Type="Int32" />
+    <NavigationProperty Name="image" Relationship="kitsModel.FK__product__image_I__59063A47" FromRole="product" ToRole="image" />
   </EntityType>
   <EntityType Name="product_order">
     <Key>
@@ -242,6 +245,10 @@
       <End Role="zipcode" EntitySet="zipcodes" />
       <End Role="user" EntitySet="users" />
     </AssociationSet>
+    <AssociationSet Name="FK__product__image_I__59063A47" Association="kitsModel.FK__product__image_I__59063A47">
+      <End Role="image" EntitySet="images" />
+      <End Role="product" EntitySet="products" />
+    </AssociationSet>
   </EntityContainer>
   <Association Name="FK__users__zipcode__5812160E">
     <End Type="kitsModel.zipcode" Role="zipcode" Multiplicity="0..1" />
@@ -252,6 +259,18 @@
       </Principal>
       <Dependent Role="user">
         <PropertyRef Name="zipcode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__product__image_I__59063A47">
+    <End Type="kitsModel.image" Role="image" Multiplicity="0..1" />
+    <End Type="kitsModel.product" Role="product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="image">
+        <PropertyRef Name="image_ID" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="image_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
