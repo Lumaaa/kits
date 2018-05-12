@@ -24,6 +24,12 @@ namespace kits.ViewModels
         {
             products.Add(product);
         }
+
+        public void RemoveItem(product product)
+        {
+            products.RemoveAll(i => i.product_ID == product.product_ID);
+        }
+
         public void Clear()
         {
             products.Clear();

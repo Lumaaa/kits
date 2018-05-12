@@ -31,6 +31,17 @@ namespace kits.Controllers
             return RedirectToAction("Index", new { controller = returnUrl.Substring(1) });
         }
 
+        public RedirectToRouteResult RemoveFromCart(Cart cart, int productId, string returnUrl)
+        {
+            product product = db.products.Find(productId);
+
+            if (product != null)
+            {
+                cart.RemoveItem(product);
+            }
+            return RedirectToAction("Index", new { controller = "Cart" });
+        }
+
         private Cart GetCart()
         {
             Cart cart = (Cart)Session["Cart"];
