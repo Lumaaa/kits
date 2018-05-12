@@ -1,0 +1,22 @@
+﻿<!-- Using a strongly typed view -->
+
+@model kits.ViewModels.CartIndexViewModel
+@{
+    ViewBag.Title = "Kits: Your Cart";
+}
+<h2> Your cart </h2>
+        @foreach (var product in Model.Cart.Products)
+        {
+            <tr>
+                <td class="text-center">@product.</td>
+                <td class="text-left">@product.product_ID</td>
+                <td class="text-right">@product.product_name</td>
+                <td class="text-right"> @product.product_price.ToString() </td>
+            </tr>
+        }
+
+<p>Total: @Model.Cart.TotalPrice.ToString("n")</p>
+
+<div class="text-center">
+    <a class="btn btn-primary" href="@Model.ReturnUrl">Continue shopping</a>
+</div>
