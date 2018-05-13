@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Kits.dk </title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -27,7 +27,9 @@
                     <li>@Html.ActionLink("Services", "Services", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
-             <!-- @Html.Partial("_LoginPartial") --> 
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Cart", "Index", "Cart")</li>
+                </ul>
             </div>
         </div>
     </div>

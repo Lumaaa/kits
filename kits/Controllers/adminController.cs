@@ -10,7 +10,7 @@ using kits.Models;
 
 namespace kits.Controllers
 {
-    public class ordersController : Controller
+    public class adminController : Controller
     {
         private kitsEntities db = new kitsEntities();
 
