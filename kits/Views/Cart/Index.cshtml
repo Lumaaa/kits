@@ -46,7 +46,6 @@ else
     <div style="text-align:right">
         <p>Total: @Model.Cart.TotalPrice.ToString("n") DKK</p>
         @Html.ActionLink("Continue shopping", "Index", "products", null, new { @class = "btn btn-primary" })
-        @Html.ActionLink("Checkout", "Index", "products", null, new { @class = "btn btn-success" })
+        @Html.ActionLink("Checkout", "Index", "CartCheckout", null, new { @class = "btn btn-success" })
     </div>
-
 }

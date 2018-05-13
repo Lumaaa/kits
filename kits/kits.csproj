@@ -199,6 +199,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\brandsController.cs" />
+    <Compile Include="Controllers\CartCheckoutController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\categoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -262,6 +263,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\Cart.cs" />
+    <Compile Include="ViewModels\CartCheckoutIndexViewModel.cs" />
     <Compile Include="ViewModels\CartIndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -373,6 +375,7 @@
     <Content Include="Views\sizes\Index.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\CartCheckout\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
