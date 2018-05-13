@@ -29,15 +29,31 @@ namespace kits.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Index([Bind(Include = "users_ID,user_email,user_pasword,user_address,user_firstname,user_lastname,user_phone,zipcode")] user user)
         {
-            if (ModelState.IsValid)
+            Cart cart = (Cart)Session["Cart"];
+            if (ModelState.IsValid && cart != null)
             {
                 db.users.Add(user);
                 db.SaveChanges();
+
+                order newOrder = new order();
+                newOrder.state_ID = 1;
+                newOrder.users_ID = user.users_ID;
+                db.orders.Add(newOrder);
+                db.SaveChanges();
+                
+                foreach (var product in cart.Products) {
+                    product_order orderItem = new product_order();
+                    orderItem.orders_ID = newOrder.order_ID;
+                    orderItem.product_ID = product.product_ID;
+                    db.product_order.Add(orderItem);
+                }
+
+                cart.Clear();
                 return RedirectToAction("Index");
             }
-            //todo: place order as well after creating user
+          
             ViewBag.zipcode = new SelectList(db.zipcodes, "zipcode1", "city", user.zipcode);
-            return View(user);
+            return View();
         }
     }
 }

@@ -4,29 +4,22 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Orders</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.state.name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.user.user_email)
-        </th>
+        <th>User email</th>
+        <th>Order state</th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.state.name)
+            @Html.DisplayFor(modelItem => item.user.user_email)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.user.user_email)
+            @Html.DisplayFor(modelItem => item.state.name)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.order_ID }) |
