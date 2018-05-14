@@ -6,7 +6,6 @@
 
 <h2>Kits Shop</h2>
 
-<!--<p> @Html.ActionLink("Create New", "Create") </p> -->
 <table class="table">
     <tr>
         <th> </th>
@@ -15,11 +14,18 @@
         <th> Price </th>
         <th> Brand </th>
         <th> Category </th>
-        <th> Size </th>
+        <th> Available sizes </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
+    var sizesString = "";
+    if (item.XS > 0) { sizesString += "XS "; }
+    if (item.S > 0) { sizesString += "S "; }
+    if (item.M > 0) { sizesString += "M "; }
+    if (item.L > 0) { sizesString += "L "; }
+    if (item.XL > 0) { sizesString += "XL "; }
+
     <tr>
         <td>
             <img src="~/images/placeholder.jpg" style="width:300px;" />
@@ -40,12 +46,10 @@
             @Html.DisplayFor(modelItem => item.category.name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.size.size_name)
+            @sizesString
         </td>
         <td>
-          <!-- @Html.ActionLink("Edit", "Edit", new { id=item.product_ID }) --> 
           @Html.ActionLink("Details", "Details", new { id=item.product_ID })
-          <!-- @Html.ActionLink("Delete", "Delete", new { id=item.product_ID })-->
         </td>
     </tr>
 }

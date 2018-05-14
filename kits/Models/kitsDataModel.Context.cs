@@ -33,7 +33,6 @@ namespace kits.Models
         public virtual DbSet<order> orders { get; set; }
         public virtual DbSet<product> products { get; set; }
         public virtual DbSet<product_order> product_order { get; set; }
-        public virtual DbSet<size> sizes { get; set; }
         public virtual DbSet<state> states { get; set; }
         public virtual DbSet<user> users { get; set; }
         public virtual DbSet<zipcode> zipcodes { get; set; }

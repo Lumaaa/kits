@@ -17,7 +17,7 @@ namespace kits.Controllers
         // GET: products
         public ActionResult Index()
         {
-            var products = db.products.Include(p => p.brand).Include(p => p.category).Include(p => p.size);
+            var products = db.products.Include(p => p.brand).Include(p => p.category);
             return View(products.ToList());
         }
 
@@ -33,6 +33,14 @@ namespace kits.Controllers
             {
                 return HttpNotFound();
             }
+            List<SelectListItem> sizes = new List<SelectListItem>();
+            if (product.XS > 0) { sizes.Add(new SelectListItem { Text = "XS", Value = "XS" }); };
+            if (product.S > 0) { sizes.Add(new SelectListItem { Text = "S", Value = "S" }); };
+            if (product.M > 0) { sizes.Add(new SelectListItem { Text = "M", Value = "M" }); };
+            if (product.L > 0) { sizes.Add(new SelectListItem { Text = "L", Value = "L" }); };
+            if (product.XL > 0) { sizes.Add(new SelectListItem { Text = "XL", Value = "XL" }); };
+            ViewBag.sizes = sizes;
+
             return View(product);
         }
 
@@ -41,7 +49,6 @@ namespace kits.Controllers
         {
             ViewBag.brand_ID = new SelectList(db.brands, "brand_ID", "name");
             ViewBag.category_ID = new SelectList(db.categories, "category_ID", "name");
-            ViewBag.size_ID = new SelectList(db.sizes, "size_ID", "size_name");
             return View();
         }
 
@@ -61,7 +68,6 @@ namespace kits.Controllers
 
             ViewBag.brand_ID = new SelectList(db.brands, "brand_ID", "name", product.brand_ID);
             ViewBag.category_ID = new SelectList(db.categories, "category_ID", "name", product.category_ID);
-            ViewBag.size_ID = new SelectList(db.sizes, "size_ID", "size_name", product.size_ID);
             return View(product);
         }
 
@@ -79,7 +85,6 @@ namespace kits.Controllers
             }
             ViewBag.brand_ID = new SelectList(db.brands, "brand_ID", "name", product.brand_ID);
             ViewBag.category_ID = new SelectList(db.categories, "category_ID", "name", product.category_ID);
-            ViewBag.size_ID = new SelectList(db.sizes, "size_ID", "size_name", product.size_ID);
             return View(product);
         }
 
@@ -98,7 +103,6 @@ namespace kits.Controllers
             }
             ViewBag.brand_ID = new SelectList(db.brands, "brand_ID", "name", product.brand_ID);
             ViewBag.category_ID = new SelectList(db.categories, "category_ID", "name", product.category_ID);
-            ViewBag.size_ID = new SelectList(db.sizes, "size_ID", "size_name", product.size_ID);
             return View(product);
         }
 
