@@ -4,45 +4,39 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Kits.dk </title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @Styles.Render("~/Content/ministyle.css")
+
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Kits", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Shop", "Index", "products")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Services", "Services", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>@Html.ActionLink("Cart", "Index", "Cart")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
+    <header>
+        <nav>
+            <span class="topnav" id="myTopnav">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                @Html.ActionLink("Home", "Index", "Home")
+                @Html.ActionLink("Shop", "Index", "products")
+                @Html.ActionLink("Kits", "Index", "Home", new { area = "" }, new { @class = "" })
+                @Html.ActionLink("About", "About", "Home")
+                @Html.ActionLink("Services", "Services", "Home")
+                <a href="#news"><img src='' alt="logo" class='logo' /></a>
+            </span>
+            <span class='basket'>@Html.ActionLink("Cart", "Index", "Cart") <img src='src/img/basket.png' alt="shopping basket" /></span>
+        </nav>
+    </header>
+    <section>
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    </section>
+    <footer>
+        <span>
+            &copy; @Html.ActionLink("Kits.dk", "index", "Home")</span>
+            <span>@Html.ActionLink("Terms and conditions", "Services", "Home")</span>
+            <span>@Html.ActionLink("Contact", "Services", "Home")</span>
+</footer>
+    @Scripts.Render("~/Scripts/navbar.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>

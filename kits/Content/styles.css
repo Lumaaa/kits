@@ -1,0 +1,102 @@
+body {
+  font-family: 'Roboto Slab', serif;
+  background-color: #ffffff;
+  color:#000000;
+  margin: 0;
+  width: 100%;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+h2 {
+
+}
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+}
+nav {
+
+}
+section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: #000000;
+  color: #ffffff;
+  height:100px;
+}
+footer a{
+  color: #ffffff;
+  text-decoration: none;
+}
+footer span{
+
+}
+.shopping{
+
+
+}
+.shopping img{
+  width: 75%;
+  height: 50%;
+}
+.other{
+  width: 100%
+}
+.about{
+  float: right;
+}
+.about img{
+  width: 50%;
+  height: 50%;
+}
+.service{
+  float: right;
+}
+.service img{
+  width: 50%;
+  height: 50%;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #000000;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+    .topnav .icon {
+        display: none;
+    }
+
+.basket {
+    float: right;
+}
+
+.logo {
+}
+
+

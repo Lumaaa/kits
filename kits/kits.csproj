@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -267,30 +268,21 @@
     <Compile Include="ViewModels\CartIndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\desktop.css" />
+    <Content Include="Content\img\about.jpg" />
+    <Content Include="Content\img\basket.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\services.jpg" />
+    <Content Include="Content\img\webshop.jpg" />
+    <Content Include="Content\ministyle.css" />
+    <Content Include="Content\mobile.css" />
+    <Content Include="Content\navbar.css" />
+    <Content Include="Content\reset.css" />
+    <Content Include="Content\styles.css" />
+    <Content Include="Content\tablet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="images\about.jpg" />
-    <Content Include="images\drycleaning.jpg" />
-    <Content Include="images\egaa.jpg" />
-    <Content Include="images\logo.png" />
-    <Content Include="images\personal\annemette.jpg" />
-    <Content Include="images\personal\annette.jpg" />
-    <Content Include="images\personal\caroline.jpg" />
-    <Content Include="images\personal\jane.jpg" />
-    <Content Include="images\personal\kit.jpg" />
-    <Content Include="images\personal\Louise.jpg" />
-    <Content Include="images\personal\metteline.jpg" />
-    <Content Include="images\personal\pia.jpg" />
-    <Content Include="images\personal\rikke.jpg" />
-    <Content Include="images\personal\sarah.jpg" />
-    <Content Include="images\services.jpg" />
-    <Content Include="images\skejby.jpg" />
-    <Content Include="images\tailoring.jpg" />
-    <Content Include="images\webshop.jpg" />
     <Content Include="Models\kitsDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>kitsDataModel.edmx</DependentUpon>
@@ -324,6 +316,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\navbar.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
