@@ -273,6 +273,24 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\about.jpg" />
+    <Content Include="images\drycleaning.jpg" />
+    <Content Include="images\egaa.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\personal\annemette.jpg" />
+    <Content Include="images\personal\annette.jpg" />
+    <Content Include="images\personal\caroline.jpg" />
+    <Content Include="images\personal\jane.jpg" />
+    <Content Include="images\personal\kit.jpg" />
+    <Content Include="images\personal\Louise.jpg" />
+    <Content Include="images\personal\metteline.jpg" />
+    <Content Include="images\personal\pia.jpg" />
+    <Content Include="images\personal\rikke.jpg" />
+    <Content Include="images\personal\sarah.jpg" />
+    <Content Include="images\services.jpg" />
+    <Content Include="images\skejby.jpg" />
+    <Content Include="images\tailoring.jpg" />
+    <Content Include="images\webshop.jpg" />
     <Content Include="Models\kitsDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>kitsDataModel.edmx</DependentUpon>
@@ -379,7 +397,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
