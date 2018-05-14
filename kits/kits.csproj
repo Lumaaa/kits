@@ -207,7 +207,6 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\adminController.cs" />
     <Compile Include="Controllers\productsController.cs" />
-    <Compile Include="Controllers\sizesController.cs" />
     <Compile Include="Controllers\usersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -247,9 +246,6 @@
       <DependentUpon>kitsDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\product_order.cs">
-      <DependentUpon>kitsDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\size.cs">
       <DependentUpon>kitsDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\state.cs">
@@ -379,11 +375,6 @@
     <Content Include="Views\categories\Details.cshtml" />
     <Content Include="Views\categories\Edit.cshtml" />
     <Content Include="Views\categories\Index.cshtml" />
-    <Content Include="Views\sizes\Create.cshtml" />
-    <Content Include="Views\sizes\Delete.cshtml" />
-    <Content Include="Views\sizes\Details.cshtml" />
-    <Content Include="Views\sizes\Edit.cshtml" />
-    <Content Include="Views\sizes\Index.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\CartCheckout\Index.cshtml" />

@@ -44,14 +44,17 @@
     <Property Name="brand_ID" Type="Int32" />
     <Property Name="category_ID" Type="Int32" />
     <Property Name="product_description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="size_ID" Type="Int32" />
     <Property Name="product_price" Type="Decimal" Precision="18" Scale="0" />
     <NavigationProperty Name="brand" Relationship="Self.FK__product__brand_I__4BAC3F29" FromRole="product" ToRole="brand" />
     <NavigationProperty Name="category" Relationship="Self.FK__product__categor__4CA06362" FromRole="product" ToRole="category" />
-    <NavigationProperty Name="size" Relationship="Self.FK__product__size_ID__4D94879B" FromRole="product" ToRole="size" />
     <NavigationProperty Name="product_order" Relationship="Self.FK__product_o__produ__571DF1D5" FromRole="product" ToRole="product_order" />
     <Property Name="image_ID" Type="Int32" />
     <NavigationProperty Name="image" Relationship="kitsModel.FK__product__image_I__59063A47" FromRole="product" ToRole="image" />
+    <Property Name="XS" Type="Int32" />
+    <Property Name="S" Type="Int32" />
+    <Property Name="M" Type="Int32" />
+    <Property Name="L" Type="Int32" />
+    <Property Name="XL" Type="Int32" />
   </EntityType>
   <EntityType Name="product_order">
     <Key>
@@ -62,14 +65,6 @@
     <Property Name="product_ID" Type="Int32" />
     <NavigationProperty Name="order" Relationship="Self.FK__product_o__order__5629CD9C" FromRole="product_order" ToRole="orders" />
     <NavigationProperty Name="product" Relationship="Self.FK__product_o__produ__571DF1D5" FromRole="product_order" ToRole="product" />
-  </EntityType>
-  <EntityType Name="size">
-    <Key>
-      <PropertyRef Name="size_ID" />
-    </Key>
-    <Property Name="size_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="size_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="products" Relationship="Self.FK__product__size_ID__4D94879B" FromRole="size" ToRole="product" />
   </EntityType>
   <EntityType Name="state">
     <Key>
@@ -162,18 +157,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__product__size_ID__4D94879B">
-    <End Role="size" Type="Self.size" Multiplicity="0..1" />
-    <End Role="product" Type="Self.product" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="size">
-        <PropertyRef Name="size_ID" />
-      </Principal>
-      <Dependent Role="product">
-        <PropertyRef Name="size_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__product_o__produ__571DF1D5">
     <End Role="product" Type="Self.product" Multiplicity="0..1" />
     <End Role="product_order" Type="Self.product_order" Multiplicity="*" />
@@ -193,7 +176,6 @@
     <EntitySet Name="orders" EntityType="Self.order" />
     <EntitySet Name="products" EntityType="Self.product" />
     <EntitySet Name="product_order" EntityType="Self.product_order" />
-    <EntitySet Name="sizes" EntityType="Self.size" />
     <EntitySet Name="states" EntityType="Self.state" />
     <EntitySet Name="users" EntityType="Self.user" />
     <EntitySet Name="zipcodes" EntityType="Self.zipcode" />
@@ -216,10 +198,6 @@
     <AssociationSet Name="FK__product_o__order__5629CD9C" Association="Self.FK__product_o__order__5629CD9C">
       <End Role="orders" EntitySet="orders" />
       <End Role="product_order" EntitySet="product_order" />
-    </AssociationSet>
-    <AssociationSet Name="FK__product__size_ID__4D94879B" Association="Self.FK__product__size_ID__4D94879B">
-      <End Role="size" EntitySet="sizes" />
-      <End Role="product" EntitySet="products" />
     </AssociationSet>
     <AssociationSet Name="FK__product_o__produ__571DF1D5" Association="Self.FK__product_o__produ__571DF1D5">
       <End Role="product" EntitySet="products" />

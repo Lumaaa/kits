@@ -22,21 +22,21 @@
                 @Html.ActionLink("Kits", "Index", "Home", new { area = "" }, new { @class = "" })
                 @Html.ActionLink("About", "About", "Home")
                 @Html.ActionLink("Services", "Services", "Home")
-                <a href="#news"><img src='' alt="logo" class='logo' /></a>
+                <a href="#news"><img src='~/Content/img/logo.png' alt="logo" class='logo' /></a>
             </span>
-            <span class='basket'>@Html.ActionLink("Cart", "Index", "Cart") <img src='src/img/basket.png' alt="shopping basket" /></span>
+            <span class='basket'>@Html.ActionLink("Cart", "Index", "Cart") <img src='~/Content/img/basket.png' alt="shopping basket" /></span>
         </nav>
     </header>
     <section>
         @RenderBody()
     </section>
     <footer>
-        <span>
-            &copy; @Html.ActionLink("Kits.dk", "index", "Home")</span>
+            <span> @Html.ActionLink("Kits.dk", "index", "Home")</span>
             <span>@Html.ActionLink("Terms and conditions", "Services", "Home")</span>
             <span>@Html.ActionLink("Contact", "Services", "Home")</span>
 </footer>
     @Scripts.Render("~/Scripts/navbar.js")
+    @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>
 </html>
