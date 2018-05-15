@@ -1,10 +1,53 @@
-﻿@model IEnumerable<kits.Models.product>
+﻿@using kits.Models;
+
+@helper RenderProduct(product product)
+{
+var sizesString = "";
+if (product.XS > 0) { sizesString += "XS "; }
+if (product.S > 0) { sizesString += "S "; }
+if (product.M > 0) { sizesString += "M "; }
+if (product.L > 0) { sizesString += "L "; }
+if (product.XL > 0) { sizesString += "XL "; }
+
+    <tr>
+        <td>
+            <img src="~/images/placeholder.jpg" style="width:300px;" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => product.product_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => product.product_description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => product.product_price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => product.brand.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => product.category.name)
+        </td>
+        <td>
+            @sizesString
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id = product.product_ID })
+        </td>
+    </tr>
+}
 
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Kits Shop</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.DropDownList("CategoryId", "All categories")
+    <button type="submit"> Filter </button>
+}
 
 <table class="table">
     <tr>
@@ -18,40 +61,9 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    var sizesString = "";
-    if (item.XS > 0) { sizesString += "XS "; }
-    if (item.S > 0) { sizesString += "S "; }
-    if (item.M > 0) { sizesString += "M "; }
-    if (item.L > 0) { sizesString += "L "; }
-    if (item.XL > 0) { sizesString += "XL "; }
-
-    <tr>
-        <td>
-            <img src="~/images/placeholder.jpg" style="width:300px;" />
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.product_name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.product_description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.product_price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.brand.name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.category.name)
-        </td>
-        <td>
-            @sizesString
-        </td>
-        <td>
-          @Html.ActionLink("Details", "Details", new { id=item.product_ID })
-        </td>
-    </tr>
-}
+    @foreach (var product in ViewBag.Products)
+    {
+        @RenderProduct(product)
+    }
 
 </table>
