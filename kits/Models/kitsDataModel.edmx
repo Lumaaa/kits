@@ -58,6 +58,7 @@
           <Property Name="product_order_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="orders_ID" Type="int" />
           <Property Name="product_ID" Type="int" />
+          <Property Name="product_size" Type="nvarchar" MaxLength="5" />
         </EntityType>
         <EntityType Name="states">
           <Key>
@@ -310,6 +311,7 @@
           <Property Name="product_ID" Type="Int32" />
           <NavigationProperty Name="order" Relationship="Self.FK__product_o__order__5629CD9C" FromRole="product_order" ToRole="orders" />
           <NavigationProperty Name="product" Relationship="Self.FK__product_o__produ__571DF1D5" FromRole="product_order" ToRole="product" />
+          <Property Name="product_size" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="state">
           <Key>
@@ -557,6 +559,7 @@
           <EntitySetMapping Name="product_order">
             <EntityTypeMapping TypeName="kitsModel.product_order">
               <MappingFragment StoreEntitySet="product_order">
+                <ScalarProperty Name="product_size" ColumnName="product_size" />
                 <ScalarProperty Name="product_order_ID" ColumnName="product_order_ID" />
                 <ScalarProperty Name="orders_ID" ColumnName="orders_ID" />
                 <ScalarProperty Name="product_ID" ColumnName="product_ID" />

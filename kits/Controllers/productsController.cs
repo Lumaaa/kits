@@ -18,6 +18,7 @@ namespace kits.Controllers
         public ActionResult Index()
         {
             var products = db.products.Include(p => p.brand).Include(p => p.category);
+            //categories to do
             return View(products.ToList());
         }
 
