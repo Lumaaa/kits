@@ -6,7 +6,8 @@
         justify-content: center;
         align-items: flex-start;
         align-items: center;
-        height: 50px;
+        height: 40px;
+ 
     }
     .topLogo {
         flex: 1;
@@ -15,6 +16,7 @@
 
     }
     .logo {
+        padding-top: 4%;
         width: 50%;
         height: auto;
     }
@@ -28,21 +30,28 @@
         flex: 1;
         justify-self: end;
         text-align:right;
-        padding-right: 2%;
+        padding-right: 5%;
     }
 
     section {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
+        padding-left: 5%;
+        padding-right: 5%;
+
     }
 
     footer {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
-        height: 50px;
+        height: 40px;
         align-items: center;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
     footer a{
         font-size: 90%;
@@ -52,11 +61,12 @@
     .shopping {
         position: relative;
         width: 100%;
+       
     }
 
         .shopping img {
             width: 97%;
-            height: auto;
+            
         }
 
         .shopping .btn {
@@ -80,11 +90,12 @@
     .about {
         position: relative;
         width: 47%;
+        
     }
 
         .about img {
             width: 47%;
-            height: auto;
+           
         }
 
         .about .btn {
@@ -109,7 +120,7 @@
 
         .service img {
             width: 47%;
-            height: auto;
+            
         }
 
         .service .btn {

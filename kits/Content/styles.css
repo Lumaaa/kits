@@ -125,7 +125,7 @@ footer {
     }
 
         .about .btn:hover {
-            background-color: black;
+            background-color: #ddd;
         }
 
 .service {
@@ -155,5 +155,5 @@ footer {
     }
 
         .service .btn:hover {
-            background-color: black;
+            background-color: #ddd;
         }
