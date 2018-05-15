@@ -283,6 +283,7 @@
     <Content Include="Content\ministyle.css" />
     <Content Include="Content\mobile.css" />
     <Content Include="Content\navbar.css" />
+    <Content Include="Content\niklas.css" />
     <Content Include="Content\reset.css" />
     <Content Include="Content\styles.css" />
     <Content Include="Content\tablet.css" />
