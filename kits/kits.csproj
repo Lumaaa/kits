@@ -268,6 +268,16 @@
     <Content Include="Content\img\about.jpg" />
     <Content Include="Content\img\basket.png" />
     <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\personal\Annemette.jpg" />
+    <Content Include="Content\img\personal\Annette.jpg" />
+    <Content Include="Content\img\personal\caroline.jpg" />
+    <Content Include="Content\img\personal\jane.jpg" />
+    <Content Include="Content\img\personal\kit.jpg" />
+    <Content Include="Content\img\personal\Louise.jpg" />
+    <Content Include="Content\img\personal\metteline.jpg" />
+    <Content Include="Content\img\personal\Pia.jpg" />
+    <Content Include="Content\img\personal\rikke.jpg" />
+    <Content Include="Content\img\personal\sarah.jpg" />
     <Content Include="Content\img\services.jpg" />
     <Content Include="Content\img\webshop.jpg" />
     <Content Include="Content\ministyle.css" />
