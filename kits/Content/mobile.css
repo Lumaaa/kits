@@ -11,10 +11,11 @@
     .topLogo {
         flex: 1;
         order: 0;
- 
+        text-align:center;
+
     }
     .logo {
-        width: 80%;
+        width: 50%;
         height: auto;
     }
     nav {
@@ -26,6 +27,8 @@
     .basket {
         flex: 1;
         justify-self: end;
+        text-align:right;
+        padding-right: 2%;
     }
 
     section {
