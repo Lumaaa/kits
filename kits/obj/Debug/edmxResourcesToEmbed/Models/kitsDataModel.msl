@@ -37,13 +37,17 @@
     <EntitySetMapping Name="products">
       <EntityTypeMapping TypeName="kitsModel.product">
         <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="XL" ColumnName="XL" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="M" ColumnName="M" />
+          <ScalarProperty Name="S" ColumnName="S" />
+          <ScalarProperty Name="XS" ColumnName="XS" />
           <ScalarProperty Name="image_ID" ColumnName="image_ID" />
           <ScalarProperty Name="product_ID" ColumnName="product_ID" />
           <ScalarProperty Name="product_name" ColumnName="product_name" />
           <ScalarProperty Name="brand_ID" ColumnName="brand_ID" />
           <ScalarProperty Name="category_ID" ColumnName="category_ID" />
           <ScalarProperty Name="product_description" ColumnName="product_description" />
-          <ScalarProperty Name="size_ID" ColumnName="size_ID" />
           <ScalarProperty Name="product_price" ColumnName="product_price" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -54,14 +58,6 @@
           <ScalarProperty Name="product_order_ID" ColumnName="product_order_ID" />
           <ScalarProperty Name="orders_ID" ColumnName="orders_ID" />
           <ScalarProperty Name="product_ID" ColumnName="product_ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="sizes">
-      <EntityTypeMapping TypeName="kitsModel.size">
-        <MappingFragment StoreEntitySet="size">
-          <ScalarProperty Name="size_ID" ColumnName="size_ID" />
-          <ScalarProperty Name="size_name" ColumnName="size_name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

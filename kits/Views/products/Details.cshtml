@@ -29,7 +29,13 @@
             <dd>@Html.DisplayFor(model => model.category.name)</dd>
 
             <dt>Size</dt>
-            <dd>@Html.DisplayFor(model => model.size.size_name)</dd>
+            <dd>
+            <dd>
+                @using (Html.BeginForm())
+                {
+                    @Html.DropDownList("sizes", "Select size") }
+
+            </dd>
 
         </dl>
 
@@ -43,4 +49,3 @@
         </div>
     </div>
 </div>
-
