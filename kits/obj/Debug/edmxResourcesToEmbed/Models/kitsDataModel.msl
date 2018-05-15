@@ -55,6 +55,7 @@
     <EntitySetMapping Name="product_order">
       <EntityTypeMapping TypeName="kitsModel.product_order">
         <MappingFragment StoreEntitySet="product_order">
+          <ScalarProperty Name="product_size" ColumnName="product_size" />
           <ScalarProperty Name="product_order_ID" ColumnName="product_order_ID" />
           <ScalarProperty Name="orders_ID" ColumnName="orders_ID" />
           <ScalarProperty Name="product_ID" ColumnName="product_ID" />
