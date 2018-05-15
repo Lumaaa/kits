@@ -4,21 +4,45 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Kits Shop</h2>
+<div class="titletext">Kits Shop</div>
+<br />
+<br />
+<div class="shop">
+    @foreach (var item in Model)
+    {
 
-<table class="table">
-    <tr>
+
+        <div onclick="location.href = '@(Url.Action("Details", "products", new { id = item.product_ID }))'">
+
+            <img src="~/images/placeholder.jpg" class="shopimage" /> 
+            <div class="product-name-text">
+            @Html.DisplayFor(modelItem => item.product_name)
+            </div>
+            <div class="product-price-text"> 
+                @Html.DisplayFor(modelItem => item.product_price)
+            </div>
+        </div>
+
+    }
+
+</div>
+
+
+
+@*<table >*@
+    @*<tr>
         <th> </th>
         <th> Name </th>
         <th> Description </th>
-        <th> Price </th>
         <th> Brand </th>
+        <th> Price </th>
+       
         <th> Category </th>
         <th> Available sizes </th>
         <th></th>
-    </tr>
+    </tr>*@
 
-    @foreach (var item in Model)
+    @*@foreach (var item in Model)
     {
         var sizesString = "";
         if (item.XS > 0) { sizesString += "XS "; }
@@ -27,31 +51,34 @@
         if (item.L > 0) { sizesString += "L "; }
         if (item.XL > 0) { sizesString += "XL "; }
         <tr>
-            <td>
-                <img src="~/images/placeholder.jpg" style="width:300px;" />
+            <td onclick="location.href = '@(Url.Action("Details", "products", new { id = item.product_ID }))'">>
+                <img src="~/images/placeholder.jpg" class="shopimage" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.product_name)
             </td>
-            <td>
+            <td class="td-show-hide">
                 @Html.DisplayFor(modelItem => item.product_description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.product_price)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.brand.name)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.product_price)
+            </td>
+         
+            <td class="td-show-hide">
                 @Html.DisplayFor(modelItem => item.category.name)
             </td>
-            <td>
+            <td class="td-show-hide">
                 @sizesString
             </td>
-            <td>
-                @Html.ActionLink("Details", "Details", new { id = item.product_ID })
-            </td>
+            <td class="td-show-hide">
+            @Html.ActionLink("Details", "Details", new { id = item.product_ID })
+        </td>
         </tr>
     }
 
-</table>
+</table>*@
+
+
