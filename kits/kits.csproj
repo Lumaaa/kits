@@ -271,6 +271,9 @@
     <Content Include="Content\desktop.css" />
     <Content Include="Content\img\about.jpg" />
     <Content Include="Content\img\basket.png" />
+    <Content Include="Content\img\img01.jpg" />
+    <Content Include="Content\img\img02.jpg" />
+    <Content Include="Content\img\img03.jpg" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\services.jpg" />
     <Content Include="Content\img\webshop.jpg" />
