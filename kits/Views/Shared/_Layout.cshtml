@@ -9,38 +9,46 @@
     @Styles.Render("~/Content/ministyle.css")
 </head>
 <body>
-    <header>
-        <span class="topLogo">
-             <a href="@Url.Action("Index", "Home")" >
-                 <img src="~/Content/img/logo.png" alt="logo" class='logo' />
-             </a>
-        </span>
+    <div class="content">
+        <header>
 
-            <span class="topnav" id="myTopnav">
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                </a>
-                @Html.ActionLink("Home", "Index", "Home")
-                @Html.ActionLink("Shop", "Index", "products")        
-                @Html.ActionLink("About", "About", "Home")
-                @Html.ActionLink("Services", "Services", "Home")                
-            </span>
+            <a class="topLogo" href="@Url.Action("Index", "Home")">
+                <img src="~/Content/img/logo.png" alt="logo" class='logo' />
+            </a>
+     
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li> @Html.ActionLink("Shop", "Index", "products")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                    </ul>
+                </div>
+            </nav>
+
             <span class='basket'>
                 <a href="@Url.Action("Index", "Cart")">
                     <img src='~/Content/img/basket.png' alt="shopping basket" />
                 </a>
             </span>
 
-    </header>
-    <section>
-        @RenderBody()
-    </section>
-    <footer>
-        <span>
-            &copy; @Html.ActionLink("Kits.dk", "index", "Home")</span>
+        </header>
+        <section>
+            @RenderBody()
+        </section>
+        <footer>
+            <span>
+                &copy; @Html.ActionLink("Kits.dk", "index", "Home")
+            </span>
             <span>@Html.ActionLink("Terms and conditions", "Services", "Home")</span>
             <span>@Html.ActionLink("Contact", "Services", "Home")</span>
-</footer>
+        </footer>
+    </div>
     @Scripts.Render("~/Scripts/navbar.js")
     @RenderSection("scripts", required: false)
 </body>

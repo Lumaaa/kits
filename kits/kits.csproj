@@ -265,6 +265,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\desktop.css" />
+    <Content Include="Content\helene.css" />
     <Content Include="Content\img\about.jpg" />
     <Content Include="Content\img\basket.png" />
     <Content Include="Content\img\img01.jpg" />
