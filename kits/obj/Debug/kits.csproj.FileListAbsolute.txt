@@ -327,4 +327,3 @@ C:\Users\helen\Documents\kits\kits\bin\Microsoft.Owin.Security.MicrosoftAccount.
 C:\Users\helen\Documents\kits\kits\obj\Debug\kits.csproj.CoreCompileInputs.cache
 C:\Users\helen\Documents\kits\kits\obj\Debug\kits.dll
 C:\Users\helen\Documents\kits\kits\obj\Debug\kits.pdb
-C:\Users\helen\Documents\kits\kits\obj\Debug\kits.csprojResolveAssemblyReference.cache
