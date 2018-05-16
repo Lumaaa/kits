@@ -5,15 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="2bf6064417614350bb9d3e9534860c7e" Name="Diagram1">
-        <EntityTypeShape EntityType="kitsModel.brand" Width="1.5" PointX="10.75" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="kitsModel.category" Width="1.5" PointX="10.75" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="kitsModel.image" Width="1.5" PointX="10.75" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="kitsModel.order" Width="1.5" PointX="4.625" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="kitsModel.product" Width="1.5" PointX="8.625" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="kitsModel.product_order" Width="1.5" PointX="6.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="kitsModel.state" Width="1.5" PointX="4.625" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="kitsModel.user" Width="1.5" PointX="2.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="kitsModel.zipcode" Width="1.5" PointX="0.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.brand" Width="1.5" PointX="11.375" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.category" Width="1.5" PointX="6.875" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.image" Width="1.5" PointX="11.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.order" Width="1.5" PointX="4.625" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.product" Width="1.5" PointX="9.125" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.product_order" Width="1.5" PointX="6.875" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.state" Width="1.5" PointX="4.625" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.user" Width="1.5" PointX="2.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.zipcode" Width="1.5" PointX="0.5" PointY="1.375" IsExpanded="true" />
         <AssociationConnector Association="kitsModel.FK__product__brand_I__4BAC3F29" ManuallyRouted="false" />
         <AssociationConnector Association="kitsModel.FK__product__categor__4CA06362" ManuallyRouted="false" />
         <AssociationConnector Association="kitsModel.FK__orders__state_ID__534D60F1" ManuallyRouted="false" />
