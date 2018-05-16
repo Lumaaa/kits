@@ -15,7 +15,7 @@ namespace kits.Controllers
 
         public ActionResult Index(Cart cart, user user)
         {
-            ViewBag.zipcode = new SelectList(db.zipcodes, "zipcode1", "city");
+            ViewBag.zipcodeId = new SelectList(db.zipcodes, "zipcode_ID", "zipcode_ID", user.user_zipcode);
             return View(new CartCheckoutIndexViewModel
             {
                 Cart = cart,
@@ -28,12 +28,14 @@ namespace kits.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index([Bind(Include = "users_ID,user_email,user_pasword,user_address,user_firstname,user_lastname,user_phone,zipcode")] user user)
+        public ActionResult Index([Bind(Include = "users_ID,user_email,user_pasword,user_address,user_firstname,user_lastname,user_phone,user_zipcode")] user user)
         {
             Cart cart = (Cart)Session["Cart"];
+   
             if (ModelState.IsValid && cart != null)
             {
                 db.users.Add(user);
+                user.zipcode = db.zipcodes.First();
                 db.SaveChanges();
 
                 order newOrder = new order();
@@ -53,7 +55,7 @@ namespace kits.Controllers
                 return RedirectToAction("Index");
             }
           
-            ViewBag.zipcode = new SelectList(db.zipcodes, "zipcode1", "city", user.zipcode);
+            ViewBag.zipcodeId = new SelectList(db.zipcodes, "zipcode_ID", "zipcode_ID", user.user_zipcode);
             return View();
         }
     }

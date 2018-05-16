@@ -73,7 +73,7 @@
     <EntitySetMapping Name="users">
       <EntityTypeMapping TypeName="kitsModel.user">
         <MappingFragment StoreEntitySet="users">
-          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+          <ScalarProperty Name="user_zipcode" ColumnName="user_zipcode" />
           <ScalarProperty Name="users_ID" ColumnName="users_ID" />
           <ScalarProperty Name="user_email" ColumnName="user_email" />
           <ScalarProperty Name="user_pasword" ColumnName="user_pasword" />
@@ -84,16 +84,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="zipcodes">
-      <EntityTypeMapping TypeName="kitsModel.zipcode">
-        <MappingFragment StoreEntitySet="zipcode">
-          <ScalarProperty Name="zipcode1" ColumnName="zipcode" />
-          <ScalarProperty Name="city" ColumnName="city" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="crate_order_item" FunctionName="kitsModel.Store.crate_order_item" />
     <FunctionImportMapping FunctionImportName="create_order" FunctionName="kitsModel.Store.create_order" />
     <FunctionImportMapping FunctionImportName="create_user" FunctionName="kitsModel.Store.create_user" />
+    <EntitySetMapping Name="zipcodes">
+      <EntityTypeMapping TypeName="kitsModel.zipcode">
+        <MappingFragment StoreEntitySet="zipcode">
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="zipcode_ID" ColumnName="zipcode_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

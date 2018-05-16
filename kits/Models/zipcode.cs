@@ -20,7 +20,7 @@ namespace kits.Models
             this.users = new HashSet<user>();
         }
     
-        public int zipcode1 { get; set; }
+        public int zipcode_ID { get; set; }
         public string city { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
