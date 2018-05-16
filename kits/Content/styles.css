@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto Slab', sans-serif;
     background-color: #ffffff;
     color: #000000;
-    margin: 0;
+
 }
 
 h1 {
@@ -10,6 +10,7 @@ h1 {
 }
 
 h2 {
+    font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -26,16 +27,14 @@ header {
 }
 
 .topLogo {
-    visibility: visible;
+ 
 }
 
 .logo {
     width: 40%;
     height: auto;
 }
-.mobileLogo {
-    visibility: hidden;
-}
+
 .basket {
 }
 
@@ -51,8 +50,11 @@ footer {
     justify-content: space-around;
     background-color: #000000;
     color: #ffffff;
-    height: 50px;
+    height: 40px;
     align-items: center;
+    flex-shrink: 0;
+    bottom: 0;
+    position:absolute;
 }
 
     footer a {
