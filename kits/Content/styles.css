@@ -54,11 +54,10 @@ footer {
     /*bottom: 0;*/
     /*position:absolute;*/
 }
-
-    footer a {
-        color: #ffffff;
-        text-decoration: none;
-    }
+ footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
 
 .shopping {
     position: relative;
