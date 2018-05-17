@@ -13,14 +13,12 @@
         <EntityTypeShape EntityType="kitsModel.product_order" Width="1.5" PointX="6.875" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="kitsModel.state" Width="1.5" PointX="4.625" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="kitsModel.user" Width="1.5" PointX="2.375" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="kitsModel.zipcode" Width="1.5" PointX="0.5" PointY="1.375" IsExpanded="true" />
         <AssociationConnector Association="kitsModel.FK__product__brand_I__4BAC3F29" ManuallyRouted="false" />
         <AssociationConnector Association="kitsModel.FK__product__categor__4CA06362" ManuallyRouted="false" />
         <AssociationConnector Association="kitsModel.FK__orders__state_ID__534D60F1" ManuallyRouted="false" />
         <AssociationConnector Association="kitsModel.FK__orders__users_ID__52593CB8" ManuallyRouted="false" />
         <AssociationConnector Association="kitsModel.FK__product_o__order__5629CD9C" ManuallyRouted="false" />
         <AssociationConnector Association="kitsModel.FK__product_o__produ__571DF1D5" ManuallyRouted="false" />
-        <AssociationConnector Association="kitsModel.FK__users__zipcode__5812160E" />
         <AssociationConnector Association="kitsModel.FK__product__image_I__59063A47" />
       </Diagram>
     </edmx:Diagrams>

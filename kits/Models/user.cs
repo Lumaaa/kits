@@ -27,10 +27,10 @@ namespace kits.Models
         public string user_firstname { get; set; }
         public string user_lastname { get; set; }
         public Nullable<int> user_phone { get; set; }
-        public Nullable<int> zipcode { get; set; }
+        public Nullable<int> user_zipcode { get; set; }
+        public string user_city { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<order> orders { get; set; }
-        public virtual zipcode zipcode1 { get; set; }
     }
 }

@@ -35,7 +35,6 @@ namespace kits.Models
         public virtual DbSet<product_order> product_order { get; set; }
         public virtual DbSet<state> states { get; set; }
         public virtual DbSet<user> users { get; set; }
-        public virtual DbSet<zipcode> zipcodes { get; set; }
     
         public virtual int crate_order_item(Nullable<int> product_id, Nullable<int> order_id)
         {
