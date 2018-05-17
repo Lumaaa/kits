@@ -45,7 +45,9 @@ namespace kits.Controllers
                     product_order orderItem = new product_order();
                     orderItem.orders_ID = newOrder.order_ID;
                     orderItem.product_ID = product.product_ID;
+                    orderItem.product_size = "S";
                     db.product_order.Add(orderItem);
+                    db.SaveChanges();
                 }
 
                 cart.Clear();

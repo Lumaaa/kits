@@ -256,6 +256,7 @@
     <Compile Include="ViewModels\Cart.cs" />
     <Compile Include="ViewModels\CartCheckoutIndexViewModel.cs" />
     <Compile Include="ViewModels\CartIndexViewModel.cs" />
+    <Compile Include="ViewModels\OrderDetails.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\desktop.css" />

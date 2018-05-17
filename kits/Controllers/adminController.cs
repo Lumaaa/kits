@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using kits.Models;
+using kits.ViewModels;
 
 namespace kits.Controllers
 {
@@ -33,7 +34,19 @@ namespace kits.Controllers
             {
                 return HttpNotFound();
             }
-            return View(order);
+            List<product_order> orderItems = new List<product_order>();
+            foreach (var orderItem in db.product_order.Include(product_order => product_order.product))
+            {
+                if (orderItem.orders_ID == order.order_ID) {
+                    orderItems.Add(orderItem);
+                }
+            }
+
+            return View(new OrderDetails
+            {
+                Order = order,
+                OrderItems = orderItems
+            });
         }
 
         // GET: orders/Create
