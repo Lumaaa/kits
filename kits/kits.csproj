@@ -199,15 +199,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\brandsController.cs" />
     <Compile Include="Controllers\CartCheckoutController.cs" />
     <Compile Include="Controllers\CartController.cs" />
-    <Compile Include="Controllers\categoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\adminController.cs" />
     <Compile Include="Controllers\productsController.cs" />
-    <Compile Include="Controllers\usersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -376,21 +373,6 @@
     <Content Include="Views\admin\Details.cshtml" />
     <Content Include="Views\admin\Edit.cshtml" />
     <Content Include="Views\admin\Index.cshtml" />
-    <Content Include="Views\users\Create.cshtml" />
-    <Content Include="Views\users\Delete.cshtml" />
-    <Content Include="Views\users\Details.cshtml" />
-    <Content Include="Views\users\Edit.cshtml" />
-    <Content Include="Views\users\Index.cshtml" />
-    <Content Include="Views\brands\Create.cshtml" />
-    <Content Include="Views\brands\Delete.cshtml" />
-    <Content Include="Views\brands\Details.cshtml" />
-    <Content Include="Views\brands\Edit.cshtml" />
-    <Content Include="Views\brands\Index.cshtml" />
-    <Content Include="Views\categories\Create.cshtml" />
-    <Content Include="Views\categories\Delete.cshtml" />
-    <Content Include="Views\categories\Details.cshtml" />
-    <Content Include="Views\categories\Edit.cshtml" />
-    <Content Include="Views\categories\Index.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\CartCheckout\Index.cshtml" />
