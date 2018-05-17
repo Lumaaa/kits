@@ -7,7 +7,9 @@
         align-items: center;
         height: 100px;
     }
-
+    #navbar {
+        display: none;
+    }
     .topLogo {
         flex: 1;
         order: 0;

@@ -1,10 +1,18 @@
 @media only screen and (min-width : 1025px) {
     header {
+        height: 100px;
+        width:100%;
+    }
+    #navbar{
 
     }
-
+        #navbar ul {
+            list-style: none;
+        }
+        #navbar ul li {
+            display: flex;
+        }
     .topLogo {
-
     }
 
     .logo {
