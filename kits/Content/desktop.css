@@ -98,5 +98,8 @@
     #menuToggle {
         display: none;
     }
-}
+    .googlemaps {
+        width: 100%;
+        height: auto;
+    }
  }

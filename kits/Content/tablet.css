@@ -216,3 +216,8 @@
         transform: none;
     }
 }
+
+.googlemaps {
+    width: 100%;
+    height: auto;
+}
