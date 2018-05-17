@@ -5,6 +5,7 @@
         column-count: 2;
         column-gap: 10px;
         padding: 20px;
+        text-align:center;
         grid-row-gap: 20px;
         grid-template-columns: repeat(2,1fr);
     }
@@ -18,7 +19,8 @@
 
     td {
         text-align: left;
-        border: dotted;
+        border-bottom:solid; 
+        border-bottom-width:1px;
         vertical-align: middle;
         text-align: center;
         font-size: 10px;
@@ -45,11 +47,12 @@
         width: 100%;
     }
 
-    .addtocart{
+    .button{
         width:100%; 
         padding:20px;
         align-content:center; 
         text-align:center; 
+        border-radius:2px;
 
     }
 
@@ -102,7 +105,11 @@
         margin: 20px;
     }
 
-
+    .cartprice{
+        padding-top:20px;
+        width:100%;
+        text-align:end;
+    }
 
     .text {
         font-family: 'Roboto Slab', serif;
