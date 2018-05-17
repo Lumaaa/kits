@@ -12,6 +12,7 @@ namespace kits.Controllers
     {
         private kitsEntities db = new kitsEntities();
 
+
         public ActionResult Index(Cart cart, user user)
         {
             ViewBag.zipcode = new SelectList(db.zipcodes, "zipcode1", "city");

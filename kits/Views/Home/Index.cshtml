@@ -1,16 +1,26 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<div class="frontpage">
 
-@*@Html.ActionLink("Shop", "Index", "products")
-</br>
-@Html.ActionLink("About", "About", "Home")
-</br>
-@Html.ActionLink("Services", "Services", "Home")*@
-<section>
-    <div class='shopping'><img src='~/Content/img/webshop.jpg' alt="Shopping" /></div>
+    <span class='shopping'>
+        <a href="@Url.Action("Index", "products")">
+            <img src='~/Content/img/webshop01.png' alt="shopping" />
+            <input type="button" class="btn" value="Webshop" />
+        </a>
+    </span>
     <div class='other'>
-        <span class='service'><img src='~/Content/img/services.jpg' alt="Service" /></span>
-        <span class='about'><img src='~/Content/img/about.jpg' alt="About" /></span>
+        <span class='service'>
+            <a href="@Url.Action("Services", "Home")">
+                <img src='~/Content/img/img03.jpg' alt="´service" />
+                <input type="button" class="btn" value="Services" />
+            </a>
+        </span>
+        <span class='about'>
+            <a href="@Url.Action("About", "Home")">
+                <img src='~/Content/img/img02.jpg' alt="About" />
+                <input type="button" class="btn" value="About" />
+            </a>
+        </span>
     </div>
-</section>
+</div>

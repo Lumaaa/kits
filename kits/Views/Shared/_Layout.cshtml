@@ -5,38 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Kits.dk </title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     @Styles.Render("~/Content/ministyle.css")
-
-
 </head>
 <body>
-    <header>
-        <nav>
-            <span class="topnav" id="myTopnav">
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
+    <div class="content">
+        <header>
+
+            <a class="topLogo" href="@Url.Action("Index", "Home")">
+                <img src="~/Content/img/logo.png" alt="logo" class='logo' />
+            </a>
+     
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li> @Html.ActionLink("Shop", "Index", "products")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                    </ul>
+                </div>
+
+                <ul id="navbar">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li> @Html.ActionLink("Shop", "Index", "products")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                </ul>
+            </nav>
+
+            <span class='basket'>
+                <a href="@Url.Action("Index", "Cart")">
+                    <i class="fas fa-shopping-basket fa-1x"></i>
+                    <i class="fas fa-shopping-basket fa-2x"></i>
+                    <i class="fas fa-shopping-basket fa-3x"></i>
                 </a>
-                @Html.ActionLink("Home", "Index", "Home")
-                @Html.ActionLink("Shop", "Index", "products")
-                @Html.ActionLink("Kits", "Index", "Home", new { area = "" }, new { @class = "" })
-                @Html.ActionLink("About", "About", "Home")
-                @Html.ActionLink("Services", "Services", "Home")
-                <a href="#news"><img src='~/Content/img/logo.png' alt="logo" class='logo' /></a>
             </span>
-            <span class='basket'>@Html.ActionLink("Cart", "Index", "Cart") <img src='~/Content/img/basket.png' alt="shopping basket" /></span>
-        </nav>
-    </header>
-    <section>
-        @RenderBody()
-    </section>
-    <footer>
-            <span> @Html.ActionLink("Kits.dk", "index", "Home")</span>
+
+        </header>
+        <section>
+            @RenderBody()
+        </section>
+        <footer>
+            <span>
+                &copy; @Html.ActionLink("Kits.dk", "index", "Home")
+            </span>
             <span>@Html.ActionLink("Terms and conditions", "Services", "Home")</span>
             <span>@Html.ActionLink("Contact", "Services", "Home")</span>
-</footer>
+        </footer>
+    </div>
     @Scripts.Render("~/Scripts/navbar.js")
-    @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>
 </html>

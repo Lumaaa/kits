@@ -1,8 +1,8 @@
-body {
+﻿body {
     font-family: 'Roboto Slab', sans-serif;
     background-color: #ffffff;
     color: #000000;
-
+    margin: 0;
 }
 
 h1 {
@@ -10,7 +10,6 @@ h1 {
 }
 
 h2 {
-    font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -27,15 +26,15 @@ header {
 }
 
 .topLogo {
- 
 }
 
 .logo {
+    width: 40%;
+    height: auto;
 }
 
 .basket {
 }
-
 
 section {
     display: flex;
@@ -49,10 +48,8 @@ footer {
     justify-content: space-around;
     background-color: #000000;
     color: #ffffff;
+    height: 50px;
     align-items: center;
-    flex-shrink: 0;
-    /*bottom: 0;*/
-    /*position:absolute;*/
 }
 
     footer a {
@@ -62,9 +59,12 @@ footer {
 
 .shopping {
     position: relative;
+    width: 100%;
 }
 
     .shopping img {
+        width: 100%;
+        height: auto;
         border: solid #000000;
     }
 
@@ -74,7 +74,8 @@ footer {
 
     .shopping .btn {
         position: absolute;
-
+        top: -80%;
+        left: 50%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #ffffff;
@@ -91,19 +92,24 @@ footer {
         }
 
 .other {
+    width: 100%
 }
 
 .about {
     position: relative;
+    width: 100%;
 }
 
     .about img {
+        width: 100%;
         height: auto;
         border: solid #000000;
     }
 
     .about .btn {
         position: absolute;
+        top: -80%;
+        left: 50%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #ffffff;
@@ -116,22 +122,24 @@ footer {
     }
 
         .about .btn:hover {
-            background-color: #ddd;
+            background-color: black;
         }
 
 .service {
     position: relative;
- 
+    width: 100%;
 }
 
     .service img {
-
+        width: 100%;
         height: auto;
         border: solid #000000;
     }
 
     .service .btn {
         position: absolute;
+        top: -80%;
+        left: 50%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #ffffff;
@@ -144,5 +152,5 @@ footer {
     }
 
         .service .btn:hover {
-            background-color: #ddd;
+            background-color: black;
         }
