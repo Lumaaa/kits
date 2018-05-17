@@ -49,33 +49,6 @@ namespace kits.Controllers
             });
         }
 
-        // GET: orders/Create
-        public ActionResult Create()
-        {
-            ViewBag.state_ID = new SelectList(db.states, "state_ID", "name");
-            ViewBag.users_ID = new SelectList(db.users, "users_ID", "user_email");
-            return View();
-        }
-
-        // POST: orders/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "order_ID,users_ID,state_ID")] order order)
-        {
-            if (ModelState.IsValid)
-            {
-                db.orders.Add(order);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            ViewBag.state_ID = new SelectList(db.states, "state_ID", "name", order.state_ID);
-            ViewBag.users_ID = new SelectList(db.users, "users_ID", "user_email", order.users_ID);
-            return View(order);
-        }
-
         // GET: orders/Edit/5
         public ActionResult Edit(int? id)
         {
