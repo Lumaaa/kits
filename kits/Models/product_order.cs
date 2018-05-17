@@ -17,6 +17,7 @@ namespace kits.Models
         public int product_order_ID { get; set; }
         public Nullable<int> orders_ID { get; set; }
         public Nullable<int> product_ID { get; set; }
+        public string product_size { get; set; }
     
         public virtual order order { get; set; }
         public virtual product product { get; set; }

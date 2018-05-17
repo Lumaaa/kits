@@ -53,6 +53,7 @@
     <Property Name="product_order_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="orders_ID" Type="int" />
     <Property Name="product_ID" Type="int" />
+    <Property Name="product_size" Type="nvarchar" MaxLength="5" />
   </EntityType>
   <EntityType Name="states">
     <Key>
