@@ -1,4 +1,18 @@
-﻿@model IEnumerable<kits.Models.product>
+﻿@using kits.Models;
+
+@helper RenderProduct(product product)
+{
+    <div onclick="location.href = '@(Url.Action("Details", "products", new { id = product.product_ID }))'">
+
+        <img src="~/images/placeholder.jpg" class="shopimage" />
+        <div class="product-name-text">
+            @Html.DisplayFor(modelItem => product.product_name)
+        </div>
+        <div class="product-price-text">
+            @Html.DisplayFor(modelItem => product.product_price)
+        </div>
+    </div>
+}
 
 @{
     ViewBag.Title = "Index";
@@ -7,78 +21,17 @@
 <div class="titletext">Kits Shop</div>
 <br />
 <br />
+
+@using (Html.BeginForm())
+{
+    @Html.DropDownList("CategoryId", "All categories")
+    <button type="submit"> Filter </button>
+}
+
+
 <div class="shop">
-    @foreach (var item in Model)
+    @foreach (var product in ViewBag.Products)
     {
-
-
-        <div onclick="location.href = '@(Url.Action("Details", "products", new { id = item.product_ID }))'">
-
-            <img src="~/images/placeholder.jpg" class="shopimage" /> 
-            <div class="product-name-text">
-            @Html.DisplayFor(modelItem => item.product_name)
-            </div>
-            <div class="product-price-text"> 
-                @Html.DisplayFor(modelItem => item.product_price)
-            </div>
-        </div>
-
+        @RenderProduct(product)
     }
-
 </div>
-
-
-
-@*<table >*@
-    @*<tr>
-        <th> </th>
-        <th> Name </th>
-        <th> Description </th>
-        <th> Brand </th>
-        <th> Price </th>
-       
-        <th> Category </th>
-        <th> Available sizes </th>
-        <th></th>
-    </tr>*@
-
-    @*@foreach (var item in Model)
-    {
-        var sizesString = "";
-        if (item.XS > 0) { sizesString += "XS "; }
-        if (item.S > 0) { sizesString += "S "; }
-        if (item.M > 0) { sizesString += "M "; }
-        if (item.L > 0) { sizesString += "L "; }
-        if (item.XL > 0) { sizesString += "XL "; }
-        <tr>
-            <td onclick="location.href = '@(Url.Action("Details", "products", new { id = item.product_ID }))'">>
-                <img src="~/images/placeholder.jpg" class="shopimage" />
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.product_name)
-            </td>
-            <td class="td-show-hide">
-                @Html.DisplayFor(modelItem => item.product_description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.brand.name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.product_price)
-            </td>
-         
-            <td class="td-show-hide">
-                @Html.DisplayFor(modelItem => item.category.name)
-            </td>
-            <td class="td-show-hide">
-                @sizesString
-            </td>
-            <td class="td-show-hide">
-            @Html.ActionLink("Details", "Details", new { id = item.product_ID })
-        </td>
-        </tr>
-    }
-
-</table>*@
-
-
