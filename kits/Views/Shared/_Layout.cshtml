@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Kits.dk </title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     @Styles.Render("~/Content/ministyle.css")
 </head>
 <body>
@@ -33,7 +33,9 @@
 
             <span class='basket'>
                 <a href="@Url.Action("Index", "Cart")">
-                    <img src='~/Content/img/basket.png' alt="shopping basket" />
+                    <i class="fas fa-shopping-basket fa-1x"></i>
+                    <i class="fas fa-shopping-basket fa-2x"></i>
+                    <i class="fas fa-shopping-basket fa-3x"></i>
                 </a>
             </span>
 
