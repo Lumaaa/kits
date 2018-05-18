@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using kits.Models;
+using kits.ViewModels;
 
 namespace kits.Controllers
 {
@@ -33,34 +34,19 @@ namespace kits.Controllers
             {
                 return HttpNotFound();
             }
-            return View(order);
-        }
-
-        // GET: orders/Create
-        public ActionResult Create()
-        {
-            ViewBag.state_ID = new SelectList(db.states, "state_ID", "name");
-            ViewBag.users_ID = new SelectList(db.users, "users_ID", "user_email");
-            return View();
-        }
-
-        // POST: orders/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "order_ID,users_ID,state_ID")] order order)
-        {
-            if (ModelState.IsValid)
+            List<product_order> orderItems = new List<product_order>();
+            foreach (var orderItem in db.product_order.Include(product_order => product_order.product))
             {
-                db.orders.Add(order);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (orderItem.orders_ID == order.order_ID) {
+                    orderItems.Add(orderItem);
+                }
             }
 
-            ViewBag.state_ID = new SelectList(db.states, "state_ID", "name", order.state_ID);
-            ViewBag.users_ID = new SelectList(db.users, "users_ID", "user_email", order.users_ID);
-            return View(order);
+            return View(new OrderDetails
+            {
+                Order = order,
+                OrderItems = orderItems
+            });
         }
 
         // GET: orders/Edit/5
