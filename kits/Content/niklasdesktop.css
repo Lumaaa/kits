@@ -1,16 +1,17 @@
-﻿@media screen and (max-width: 600px) {
+﻿@media only screen and (min-width : 600px) {
 
     .personal {
         display: grid;
-        column-count: 2;
+        column-count: 4;
         column-gap: 10px;
         padding: 20px;
-        text-align:center;
+        text-align: center;
         grid-row-gap: 20px;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(4,1fr);
     }
+
     .personalimage {
-        height: 150px;
+        height: 200px;
         width: auto;
         display: block;
         margin-left: auto;
@@ -19,8 +20,8 @@
 
     td {
         text-align: left;
-        border-bottom:solid; 
-        border-bottom-width:1px;
+        border-bottom: solid;
+        border-bottom-width: 1px;
         vertical-align: middle;
         text-align: center;
         font-size: 10px;
@@ -35,25 +36,23 @@
         padding: 20px;
         grid-row-gap: 20px;
         grid-template-columns: repeat(2,1fr);
-        width:100%;
+        width: 100%;
     }
 
     .details {
         display: grid;
-  
-        border:solid;
-        text-align:center;
+        border: solid;
+        text-align: center;
         grid-template-columns: repeat(5,1fr);
         width: 100%;
     }
 
-    .button{
-        width:100%; 
-        padding:20px;
-        align-content:center; 
-        text-align:center; 
-        border-radius:2px;
-
+    .button {
+        width: 100%;
+        padding: 20px;
+        align-content: center;
+        text-align: center;
+        border-radius: 2px;
     }
 
     .product-price-text {
@@ -65,13 +64,14 @@
         margin-top: 10px;
         margin-right: 5px;
     }
+
     .product-name-text {
         font-family: 'Roboto Slab', serif;
         background-color: #ffffff;
         color: #000000;
         text-align: start;
         font-size: 12px;
-        padding:5px;
+        padding: 5px;
     }
 
     .td-show-hide {
@@ -79,7 +79,6 @@
     }
 
     tr {
-       
         vertical-align: middle;
     }
 
@@ -101,13 +100,15 @@
     }
 
     .webimage {
-        max-width: 100%;
+        width:100%;
+        
+        
     }
 
-    .cartprice{
-        padding-top:20px;
-        width:100%;
-        text-align:end;
+    .cartprice {
+        padding-top: 20px;
+        width: 100%;
+        text-align: end;
     }
 
     .text {
@@ -115,8 +116,9 @@
         background-color: #ffffff;
         color: #000000;
         margin: 0;
+        text-align:start;
         line-height: 20px;
-        font-size: 12px;
+        font-size: 12px;  
         word-wrap: break-word;
     }
 
@@ -124,15 +126,22 @@
         font-family: 'Roboto Slab', serif;
         background-color: #ffffff;
         color: #000000;
+        margin: 0;
         font-size: 18px;
-        
+       
     }
-
-    .textcenter {
+    .textcenter{
+        text-align:center;
+    }
+    .wrapper{
+        margin:2%;
+    }
+    .grid-2x2 {
+        display: grid;
+        column-count: 2;
+        column-gap: 10px;
         text-align: center;
-    }
-
-    .wrapper {
-        margin: 2%;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(2,1fr);
     }
 }
