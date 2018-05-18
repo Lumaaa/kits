@@ -56,7 +56,7 @@
         height: 50px;
         margin-bottom:0;
     }
-    #navbar{
+    .navbar{
         display: none;
     }
     footer a {
