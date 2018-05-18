@@ -6,11 +6,13 @@
 }
 @if (Model.Cart.Products.Count == 0)
 {
+    <br />
     <h2> Your cart is empty </h2>
     @Html.ActionLink("Continue shopping", "Index", "products", null, new { @class = "btn btn-primary" })
 }
 else
 {
+    <br />
     <div>
         <div class="titletext"> Your cart </div>
         <table>

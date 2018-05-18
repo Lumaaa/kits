@@ -18,35 +18,21 @@
     <div>@Html.DisplayFor(model => model.product_description)</div>
     <br />
 
-    <div>
-
+    <div class="shop">
         <div>
-            <span>Brand: </span>
-            <span> @Html.DisplayFor(model => model.brand.name) </span>
-        </div>
-        <div>
-            <span>Category: </span>
-            <span>@Html.DisplayFor(model => model.category.name)</span>
-        </div>
+            <div>
+                <span>Brand: </span>
+                <span> @Html.DisplayFor(model => model.brand.name) </span>
+            </div>
+            <div>
+                <span>Category: </span>
+                <span>@Html.DisplayFor(model => model.category.name)</span>
+            </div>
 
-        <div>
-            <span>Price: </span>
-            <span>@Html.DisplayFor(model => model.product_price)</span>
-        </div>
-
-        <br />
-
-        <div class="details">
-            @if (Model.XS > 0)
-            { <span> XS </span> }
-            @if (Model.S > 0)
-            { <span> S </span> }
-            @if (Model.M > 0)
-            { <span> M </span> }
-            @if (Model.L > 0)
-            { <span> L </span> }
-            @if (Model.XL > 0)
-            { <span> XL </span> }
+            <div>
+                <span>Price: </span>
+                <span>@Html.DisplayFor(model => model.product_price)</span>
+            </div>
         </div>
         <div>
             <span>Size </span>
@@ -57,7 +43,11 @@
             </span>
         </div>
     </div>
+      
+       
 
+    <br />
+    <br />
 
     <div style="width:100%;">
         @using (Html.BeginForm("AddToCart", "Cart"))

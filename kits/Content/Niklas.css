@@ -91,6 +91,12 @@
         margin-right: auto;
     }
 
+    .filterdropdown {
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: end;
+    }
+
     .personaltext {
         font-family: 'Roboto Slab', serif;
         background-color: #ffffff;
@@ -126,6 +132,16 @@
         color: #000000;
         font-size: 18px;
         
+    }
+
+    .headertext {
+        font-family: 'Roboto Slab', serif;
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 18px;
+        width:100%;
+        text-align:center;
+        align-content:center;
     }
 
     .textcenter {

@@ -31,11 +31,11 @@
 
     .shop {
         display: grid;
-        column-count: 2;
+        column-count: 3;
         column-gap: 10px;
         padding: 20px;
         grid-row-gap: 20px;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(3,1fr);
         width: 100%;
     }
 
@@ -45,6 +45,10 @@
         text-align: center;
         grid-template-columns: repeat(5,1fr);
         width: 100%;
+    }
+    .clickable{
+        cursor:pointer;
+        padding:2%;
     }
 
     .button {
@@ -59,7 +63,7 @@
         font-family: 'Roboto Slab', serif;
         background-color: #ffffff;
         color: #000000;
-        text-align: start;
+        text-align: center;
         font-size: 14px;
         margin-top: 10px;
         margin-right: 5px;
@@ -69,7 +73,7 @@
         font-family: 'Roboto Slab', serif;
         background-color: #ffffff;
         color: #000000;
-        text-align: start;
+        text-align: center;
         font-size: 12px;
         padding: 5px;
     }
@@ -83,7 +87,7 @@
     }
 
     .shopimage {
-        height: 100px;
+        height: 200px;
         width: auto;
         display: block;
         margin-left: auto;
@@ -130,10 +134,28 @@
         font-size: 18px;
        
     }
+
+    .headertext {
+        font-family: 'Roboto Slab', serif;
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 18px;
+        width: 100%;
+        align-content:center;
+        text-align: center;
+    }
+
+    .filterdropdown {
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: end;
+    }
+
     .textcenter{
         text-align:center;
     }
     .wrapper{
+        width:100%;
         margin:2%;
     }
     .grid-2x2 {
@@ -143,5 +165,9 @@
         text-align: center;
         grid-row-gap: 20px;
         grid-template-columns: repeat(2,1fr);
+    }
+    .googlemapsniklas{
+        width:500px;
+        height:300px;
     }
 }
