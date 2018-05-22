@@ -4,29 +4,74 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Orders</h2>
 
-<table class="table">
-    <tr>
-        <th>User email</th>
-        <th>Order state</th>
-        <th></th>
-    </tr>
+<section class="overview">
+    <div class="head"><h2>Orders</h2></div>
+    
+    <div class="processing">
+        <h2>Processing order</h2>
+        <table>
+            <tr>
+                <th>User email</th>
+                <th>Order state</th>
+                <th></th>
+            </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.user.user_email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.state.name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.order_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.order_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.order_ID })
-        </td>
-    </tr>
-}
+            @foreach (var item in Model )
+            {
+                if (item.state.name.Equals("processing")) { 
+     <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.user.user_email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.state.name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.order_ID })
+                @Html.ActionLink("Details", "Details", new { id = item.order_ID })
+                @Html.ActionLink("Delete", "Delete", new { id = item.order_ID })
+            </td>
+        </tr>
+                }
+            }
 
-</table>
+        </table>
+    </div>
+    <div class="completed">
+        <h2>Completed order</h2>
+        <table>
+            <tr>
+                <th>User email</th>
+                <th>Order state</th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.state.name.Equals("completed"))
+                {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.user.user_email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.state.name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.order_ID })
+                    <br />
+                    @Html.ActionLink("Details", "Details", new { id = item.order_ID })
+                    <br />
+                    @Html.ActionLink("Delete", "Delete", new { id = item.order_ID })
+                </td>
+            </tr>
+                }
+            }
+
+        </table>
+    </div>
+
+</section>
+
+
