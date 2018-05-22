@@ -1,10 +1,39 @@
 ﻿@using kits.Models;
 
+
+
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<div style="width:100%;">
+    <div class="headertext">Kits Shop</div>
+    <br />
+    <br />
+
+    <div class="filterdropdown">
+        @using (Html.BeginForm())
+        {
+            @Html.DropDownList("CategoryId", "All categories")
+            <button type="submit"> Filter </button>
+        }
+    </div>
+</div>
 @helper RenderProduct(product product)
 {
-    <div onclick="location.href = '@(Url.Action("Details", "products", new { id = product.product_ID }))'">
-
-        <img src="~/images/placeholder.jpg" class="shopimage" />
+    <div class="clickable" onclick="location.href = '@(Url.Action("Details", "products", new { id = product.product_ID }))'">
+        
+        @if (product.image == null)
+        {
+            <img src="~/images/placeholder.jpg" class="shopimage" />
+        }
+        else
+        {
+            String imagepath = product.image.imagestring + ".jpg"; 
+            <img src="~/Content/img/product/@imagepath" class="shopimage" />
+            
+        }
+        
         <div class="product-name-text">
             @Html.DisplayFor(modelItem => product.product_name)
         </div>
@@ -13,22 +42,6 @@
         </div>
     </div>
 }
-
-@{
-    ViewBag.Title = "Index";
-}
-
-<div class="titletext">Kits Shop</div>
-<br />
-<br />
-
-@using (Html.BeginForm())
-{
-    @Html.DropDownList("CategoryId", "All categories")
-    <button type="submit"> Filter </button>
-}
-
-
 <div class="shop">
     @foreach (var product in ViewBag.Products)
     {

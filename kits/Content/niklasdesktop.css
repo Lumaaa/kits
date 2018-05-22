@@ -1,16 +1,17 @@
-﻿@media screen and (max-width: 600px) {
+﻿@media only screen and (min-width : 600px) {
 
     .personal {
         display: grid;
-        column-count: 2;
+        column-count: 4;
         column-gap: 10px;
         padding: 20px;
-        text-align:center;
+        text-align: center;
         grid-row-gap: 20px;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(4,1fr);
     }
+
     .personalimage {
-        height: 150px;
+        height: 200px;
         width: auto;
         display: block;
         margin-left: auto;
@@ -19,8 +20,8 @@
 
     td {
         text-align: left;
-        border-bottom:solid; 
-        border-bottom-width:1px;
+        border-bottom: solid;
+        border-bottom-width: 1px;
         vertical-align: middle;
         text-align: center;
         font-size: 10px;
@@ -30,65 +31,65 @@
 
     .shop {
         display: grid;
-        column-count: 2;
+        column-count: 3;
         column-gap: 10px;
         padding: 20px;
         grid-row-gap: 20px;
-        grid-template-columns: repeat(2,1fr);
-        width:100%;
+        grid-template-columns: repeat(3,1fr);
+        width: 100%;
     }
+
     .detailsshop {
         display: grid;
         column-count: 2;
         column-gap: 10px;
-        padding: 20px;
         grid-row-gap: 20px;
         grid-template-columns: repeat(2,1fr);
         width: 100%;
     }
 
+    .button-center{
+        text-align:center;
+      
+    }
+
     .details {
         display: grid;
-  
-        border:solid;
-        text-align:center;
+        border: solid;
+        text-align: center;
         grid-template-columns: repeat(5,1fr);
         width: 100%;
     }
-
-    .button{
-        width:100%; 
-        padding:20px;
-        align-content:center; 
-        text-align:center; 
-        border-radius:2px;
-
+    .clickable{
+        cursor:pointer;
+        padding:2%;
     }
-    .wrapper-button {
+
+    .button {
         width: 100%;
-        margin: 5%;
-    }
-
-    .button-center {
+        padding: 20px;
+        align-content: center;
         text-align: center;
+        border-radius: 2px;
     }
 
     .product-price-text {
         font-family: 'Roboto Slab', serif;
         background-color: #ffffff;
         color: #000000;
-        text-align: start;
+        text-align: center;
         font-size: 14px;
         margin-top: 10px;
         margin-right: 5px;
     }
+
     .product-name-text {
         font-family: 'Roboto Slab', serif;
         background-color: #ffffff;
         color: #000000;
-        text-align: start;
+        text-align: center;
         font-size: 12px;
-        padding:5px;
+        padding: 5px;
     }
 
     .td-show-hide {
@@ -96,22 +97,15 @@
     }
 
     tr {
-       
         vertical-align: middle;
     }
 
     .shopimage {
-        height: 100px;
+        height: 200px;
         width: auto;
         display: block;
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .filterdropdown {
-        padding-left: 10%;
-        padding-right: 10%;
-        text-align: end;
     }
 
     .personaltext {
@@ -124,13 +118,15 @@
     }
 
     .webimage {
-        max-width: 100%;
+        width:100%;
+        
+        
     }
 
-    .cartprice{
-        padding-top:20px;
-        width:100%;
-        text-align:end;
+    .cartprice {
+        padding-top: 20px;
+        width: 100%;
+        text-align: end;
     }
 
     .text {
@@ -138,17 +134,21 @@
         background-color: #ffffff;
         color: #000000;
         margin: 0;
+        text-align:start;
         line-height: 20px;
-        font-size: 12px;
+        font-size: 12px;  
         word-wrap: break-word;
     }
+
+
 
     .titletext {
         font-family: 'Roboto Slab', serif;
         background-color: #ffffff;
         color: #000000;
+        margin: 0;
         font-size: 18px;
-        
+       
     }
 
     .headertext {
@@ -156,26 +156,45 @@
         background-color: #ffffff;
         color: #000000;
         font-size: 18px;
-        width:100%;
-        text-align:center;
+        width: 100%;
         align-content:center;
-    }
-
-    .textcenter {
         text-align: center;
     }
 
-    .wrapper {
-        margin: 2%;
+    .filterdropdown {
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: end;
     }
 
-    .grid-5x5 {
+    .textcenter{
+        text-align:center;
+    }
+    .wrapper{
+        width:100%;
+        margin:2%;
+    }
+    .wrapper-button {
+        width:100%;
+        margin: 5%;
+    }
+    .grid-2x2 {
         display: grid;
-        column-gap: 5px;
-        padding: 0px;
+        column-count: 2;
+        column-gap: 10px;
         text-align: center;
         grid-row-gap: 20px;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .grid-3x3 {
+        display: grid;
+        column-count: 2;
+        column-gap: 10px;
+        padding:20px;
+        text-align: center;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(2,1fr);
     }
     .grid-4x4 {
         display: grid;
@@ -186,17 +205,28 @@
         grid-row-gap: 20px;
         grid-template-columns: repeat(4,1fr);
     }
-    .grid-2x2 {
+    .grid-5x5 {
         display: grid;
-        column-count: 2;
-        column-gap: 5px;
+        column-count: 5;
+        column-gap: 0px;
+        padding: 20px;
+       
         text-align: center;
         grid-row-gap: 20px;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(5,1fr);
+    }
+    .googlemapsniklas{
+        width:500px;
+        height:300px;
     }
 
-    .mobilehidden{
+    .griditem{
+        border-bottom:solid;
+        text-align:center;
+        vertical-align:middle;
+    }
+
+    .desktophidden{
         visibility:hidden;
     }
-
 }
