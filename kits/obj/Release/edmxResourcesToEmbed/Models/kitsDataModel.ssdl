@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="kitsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="brand">
+    <Key>
+      <PropertyRef Name="brand_ID" />
+    </Key>
+    <Property Name="brand_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="category_ID" />
+    </Key>
+    <Property Name="category_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="images">
+    <Key>
+      <PropertyRef Name="image_ID" />
+    </Key>
+    <Property Name="image_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="imagestring" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="orders">
+    <Key>
+      <PropertyRef Name="order_ID" />
+    </Key>
+    <Property Name="order_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="users_ID" Type="int" />
+    <Property Name="state_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="product_ID" />
+    </Key>
+    <Property Name="product_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="brand_ID" Type="int" />
+    <Property Name="category_ID" Type="int" />
+    <Property Name="product_description" Type="nvarchar" MaxLength="500" />
+    <Property Name="product_price" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="image_ID" Type="int" />
+    <Property Name="XS" Type="int" />
+    <Property Name="S" Type="int" />
+    <Property Name="M" Type="int" />
+    <Property Name="L" Type="int" />
+    <Property Name="XL" Type="int" />
+  </EntityType>
+  <EntityType Name="product_order">
+    <Key>
+      <PropertyRef Name="product_order_ID" />
+    </Key>
+    <Property Name="product_order_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="orders_ID" Type="int" />
+    <Property Name="product_ID" Type="int" />
+    <Property Name="product_size" Type="nvarchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="states">
+    <Key>
+      <PropertyRef Name="state_ID" />
+    </Key>
+    <Property Name="state_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="users_ID" />
+    </Key>
+    <Property Name="users_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_pasword" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_address" Type="nvarchar" MaxLength="100" />
+    <Property Name="user_firstname" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_lastname" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_phone" Type="int" />
+    <Property Name="zipcode" Type="int" />
+  </EntityType>
+  <EntityType Name="zipcode">
+    <Key>
+      <PropertyRef Name="zipcode" />
+    </Key>
+    <Property Name="zipcode" Type="int" Nullable="false" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK__orders__state_ID__534D60F1">
+    <End Role="states" Type="Self.states" Multiplicity="0..1" />
+    <End Role="orders" Type="Self.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="states">
+        <PropertyRef Name="state_ID" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="state_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders__users_ID__52593CB8">
+    <End Role="users" Type="Self.users" Multiplicity="0..1" />
+    <End Role="orders" Type="Self.orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="users_ID" />
+      </Principal>
+      <Dependent Role="orders">
+        <PropertyRef Name="users_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__product__brand_I__4BAC3F29">
+    <End Role="brand" Type="Self.brand" Multiplicity="0..1" />
+    <End Role="product" Type="Self.product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="brand">
+        <PropertyRef Name="brand_ID" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="brand_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__product__categor__4CA06362">
+    <End Role="category" Type="Self.category" Multiplicity="0..1" />
+    <End Role="product" Type="Self.product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="category_ID" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="category_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__product__image_I__59063A47">
+    <End Role="images" Type="Self.images" Multiplicity="0..1" />
+    <End Role="product" Type="Self.product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="images">
+        <PropertyRef Name="image_ID" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="image_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__product_o__order__5629CD9C">
+    <End Role="orders" Type="Self.orders" Multiplicity="0..1" />
+    <End Role="product_order" Type="Self.product_order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="orders">
+        <PropertyRef Name="order_ID" />
+      </Principal>
+      <Dependent Role="product_order">
+        <PropertyRef Name="orders_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__product_o__produ__571DF1D5">
+    <End Role="product" Type="Self.product" Multiplicity="0..1" />
+    <End Role="product_order" Type="Self.product_order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="product_ID" />
+      </Principal>
+      <Dependent Role="product_order">
+        <PropertyRef Name="product_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__users__zipcode__5812160E">
+    <End Role="zipcode" Type="Self.zipcode" Multiplicity="0..1" />
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="zipcode">
+        <PropertyRef Name="zipcode" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="zipcode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="crate_order_item" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="product_id" Type="int" Mode="In" />
+    <Parameter Name="order_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="create_order" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user_id" Type="int" Mode="In" />
+    <Parameter Name="state_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="create_user" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="password" Type="nvarchar" Mode="In" />
+    <Parameter Name="firstname" Type="nvarchar" Mode="In" />
+    <Parameter Name="lastname" Type="nvarchar" Mode="In" />
+    <Parameter Name="address" Type="nvarchar" Mode="In" />
+    <Parameter Name="phone" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="kitsModelStoreContainer">
+    <EntitySet Name="brand" EntityType="Self.brand" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="images" EntityType="Self.images" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="orders" EntityType="Self.orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product_order" EntityType="Self.product_order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="states" EntityType="Self.states" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="zipcode" EntityType="Self.zipcode" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__orders__state_ID__534D60F1" Association="Self.FK__orders__state_ID__534D60F1">
+      <End Role="states" EntitySet="states" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders__users_ID__52593CB8" Association="Self.FK__orders__users_ID__52593CB8">
+      <End Role="users" EntitySet="users" />
+      <End Role="orders" EntitySet="orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__product__brand_I__4BAC3F29" Association="Self.FK__product__brand_I__4BAC3F29">
+      <End Role="brand" EntitySet="brand" />
+      <End Role="product" EntitySet="product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__product__categor__4CA06362" Association="Self.FK__product__categor__4CA06362">
+      <End Role="category" EntitySet="category" />
+      <End Role="product" EntitySet="product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__product__image_I__59063A47" Association="Self.FK__product__image_I__59063A47">
+      <End Role="images" EntitySet="images" />
+      <End Role="product" EntitySet="product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__product_o__order__5629CD9C" Association="Self.FK__product_o__order__5629CD9C">
+      <End Role="orders" EntitySet="orders" />
+      <End Role="product_order" EntitySet="product_order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__product_o__produ__571DF1D5" Association="Self.FK__product_o__produ__571DF1D5">
+      <End Role="product" EntitySet="product" />
+      <End Role="product_order" EntitySet="product_order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__users__zipcode__5812160E" Association="Self.FK__users__zipcode__5812160E">
+      <End Role="zipcode" EntitySet="zipcode" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

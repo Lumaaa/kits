@@ -1,0 +1,76 @@
+﻿<!-- Using a strongly typed view -->
+
+@model kits.ViewModels.CartIndexViewModel
+@{
+    ViewBag.Title = "Kits: Your Cart";
+}
+@if (Model.Cart.Products.Count == 0)
+{
+    <h2> Your cart is empty </h2>
+    @Html.ActionLink("Continue shopping", "Index", "products", null, new { @class = "btn btn-primary" })
+}
+else
+{
+    <div>
+        <div class="titletext"> Your cart </div>
+        <table>
+            @foreach (var product in Model.Cart.Products)
+            {
+                <tr>
+                    <td>
+                        <img src="~/images/placeholder.jpg" style="width:100px;" />
+                    </td>
+                    <td>
+                        <h4>@Html.DisplayFor(modelItem => product.product_name)</h4>
+                        @*<p>@Html.DisplayFor(modelItem => product.brand.name)</p>*@
+                    </td>
+                    <td>
+                        S
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => product.product_price) DKK
+                    </td>
+                    <td style="text-align:right">
+                        @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                    {
+                            @Html.Hidden("ProductId", product.product_ID)
+                            @Html.HiddenFor(x => x.ReturnUrl)
+                            <input type="submit" value="Remove" />
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <br />
+    <br />
+
+    <div style="width:100%; padding:20px;">
+        <div class="cartprice">
+        
+        Total: @Model.Cart.TotalPrice.ToString("n") DKK
+        </div>
+
+        <br />
+        <br />
+       
+        <div >
+            <div >
+                <input type="submit" class="button" value="Continue shopping" onclick="location.href = '@(Url.Action("Index", "products", null))'" />
+                @*@Html.ActionLink("Continue shopping", "Index", "products", null, new { @class = "btn btn-primary" })*@
+            </div>
+            <br />
+            
+            <div>
+                <input type="submit" class="button" value="Check out" onclick="location.href = '@(Url.Action("Index", "CartCheckout", null))'" />
+                @*@Html.ActionLink("Checkout", "Index", "CartCheckout", null, new { @class = "btn btn-success" })*@
+
+            </div>
+            <br />
+        </div>
+
+    </div>
+
+
+
+}

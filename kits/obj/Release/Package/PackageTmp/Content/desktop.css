@@ -1,0 +1,105 @@
+@media only screen and (min-width : 1025px) {
+    header {
+        height: 100px;
+        width:100%;
+    }
+    #navbar{
+
+    }
+        #navbar ul {
+            list-style: none;
+        }
+        #navbar ul li {
+            display: flex;
+        }
+    .topLogo {
+    }
+
+    .logo {
+ 
+    }
+
+    nav {
+   
+    }
+
+    .basket {
+ 
+    }
+
+        .basket i {
+        }
+
+    .fa-2x {
+        display: none;
+    }
+
+    .fa-1x {
+        display: none;
+    }
+
+    section {
+ 
+    }
+
+    footer {
+
+    }
+
+        footer a {
+       
+        }
+
+
+    .shopping {
+
+    }
+
+        .shopping img {
+
+        }
+
+        .shopping .btn {
+  
+        }
+
+
+    .other {
+ 
+    }
+
+    .about {
+   
+    }
+
+        .about img {
+ 
+        }
+
+        .about .btn {
+
+        }
+
+
+
+    .service {
+
+    }
+
+        .service img {
+   
+        }
+
+        .service .btn {
+
+        }
+
+    /*burger menu*/
+    #menuToggle {
+        display: none;
+    }
+    .googlemaps {
+        width: 100%;
+        height: auto;
+    }
+ }

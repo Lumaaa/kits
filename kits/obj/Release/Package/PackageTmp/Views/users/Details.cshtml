@@ -1,0 +1,74 @@
+﻿@model kits.Models.user
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>user</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.user_email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_pasword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_pasword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.zipcode1.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.zipcode1.city)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.users_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
