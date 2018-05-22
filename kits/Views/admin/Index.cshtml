@@ -28,9 +28,13 @@
                 @Html.DisplayFor(modelItem => item.state.name)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.order_ID })<br />
-                @Html.ActionLink("Details", "Details", new { id = item.order_ID }) <br />
-                @Html.ActionLink("Delete", "Delete", new { id = item.order_ID })
+                <input type="button" class="indexButtom" value="Edit" onclick="location.href='@Url.Action("Edit", new { id =item.order_ID })'" />
+
+                <br />
+                <input type="button" class="indexButtom det" value="Details" onclick="location.href='@Url.Action("Details", new { id =item.order_ID })'" />
+
+                <br />
+                <input type="button" class="indexButtom delete" value="Delete" onclick="location.href='@Url.Action("Delete", new { id =item.order_ID })'" />
             </td>
         </tr>
                 }
@@ -59,11 +63,14 @@
                     @Html.DisplayFor(modelItem => item.state.name)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.order_ID, @class="edidtButtom" })
+                    <input type="button" class="indexButtom" value="Edit" onclick="location.href='@Url.Action("Edit", new { id =item.order_ID })'" />
+                    
                     <br />
-                    @Html.ActionLink("Details", "Details", new { id = item.order_ID, @class = "edidtButtom" })
+                    <input type="button" class="indexButtom det" value="Details" onclick="location.href='@Url.Action("Details", new { id =item.order_ID })'" />
+                  
                     <br />
-                    @Html.ActionLink("Delete", "Delete", new { id = item.order_ID, @class = "edidtButtom" })
+                    <input type="button" class="indexButtom delete" value="Delete" onclick="location.href='@Url.Action("Delete", new { id =item.order_ID })'" />
+                   
                 </td>
             </tr>
                 }

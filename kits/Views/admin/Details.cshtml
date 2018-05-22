@@ -44,11 +44,10 @@
         }
     </table>
 
-    <div>
-        <p>
-            @Html.ActionLink("Edit", "Edit", new { id = Model.Order.order_ID }) |
-            @Html.ActionLink("Back to List", "Index")
-        </p>
+    <div class="detailsbuttonview">
+        <input type="button" class="edidtButtom" value="Edit" onclick="location.href='@Url.Action("Edit", new { id = Model.Order.order_ID })'" />
+        <input type="button" class="edidtButtom" value="Back to list" onclick="location.href='@Url.Action("index")'" />
+
     </div>
 
 </div>
