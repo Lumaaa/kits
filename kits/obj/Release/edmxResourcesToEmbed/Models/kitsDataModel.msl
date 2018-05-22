@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="kitsModelStoreContainer" CdmEntityContainer="kitsEntities">
+    <EntitySetMapping Name="brands">
+      <EntityTypeMapping TypeName="kitsModel.brand">
+        <MappingFragment StoreEntitySet="brand">
+          <ScalarProperty Name="brand_ID" ColumnName="brand_ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="kitsModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="category_ID" ColumnName="category_ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="images">
+      <EntityTypeMapping TypeName="kitsModel.image">
+        <MappingFragment StoreEntitySet="images">
+          <ScalarProperty Name="image_ID" ColumnName="image_ID" />
+          <ScalarProperty Name="imagestring" ColumnName="imagestring" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="orders">
+      <EntityTypeMapping TypeName="kitsModel.order">
+        <MappingFragment StoreEntitySet="orders">
+          <ScalarProperty Name="order_ID" ColumnName="order_ID" />
+          <ScalarProperty Name="users_ID" ColumnName="users_ID" />
+          <ScalarProperty Name="state_ID" ColumnName="state_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="kitsModel.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="XL" ColumnName="XL" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="M" ColumnName="M" />
+          <ScalarProperty Name="S" ColumnName="S" />
+          <ScalarProperty Name="XS" ColumnName="XS" />
+          <ScalarProperty Name="image_ID" ColumnName="image_ID" />
+          <ScalarProperty Name="product_ID" ColumnName="product_ID" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="brand_ID" ColumnName="brand_ID" />
+          <ScalarProperty Name="category_ID" ColumnName="category_ID" />
+          <ScalarProperty Name="product_description" ColumnName="product_description" />
+          <ScalarProperty Name="product_price" ColumnName="product_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_order">
+      <EntityTypeMapping TypeName="kitsModel.product_order">
+        <MappingFragment StoreEntitySet="product_order">
+          <ScalarProperty Name="product_size" ColumnName="product_size" />
+          <ScalarProperty Name="product_order_ID" ColumnName="product_order_ID" />
+          <ScalarProperty Name="orders_ID" ColumnName="orders_ID" />
+          <ScalarProperty Name="product_ID" ColumnName="product_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="states">
+      <EntityTypeMapping TypeName="kitsModel.state">
+        <MappingFragment StoreEntitySet="states">
+          <ScalarProperty Name="state_ID" ColumnName="state_ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="kitsModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+          <ScalarProperty Name="users_ID" ColumnName="users_ID" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="user_pasword" ColumnName="user_pasword" />
+          <ScalarProperty Name="user_address" ColumnName="user_address" />
+          <ScalarProperty Name="user_firstname" ColumnName="user_firstname" />
+          <ScalarProperty Name="user_lastname" ColumnName="user_lastname" />
+          <ScalarProperty Name="user_phone" ColumnName="user_phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zipcodes">
+      <EntityTypeMapping TypeName="kitsModel.zipcode">
+        <MappingFragment StoreEntitySet="zipcode">
+          <ScalarProperty Name="zipcode1" ColumnName="zipcode" />
+          <ScalarProperty Name="city" ColumnName="city" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="crate_order_item" FunctionName="kitsModel.Store.crate_order_item" />
+    <FunctionImportMapping FunctionImportName="create_order" FunctionName="kitsModel.Store.create_order" />
+    <FunctionImportMapping FunctionImportName="create_user" FunctionName="kitsModel.Store.create_user" />
+  </EntityContainerMapping>
+</Mapping>
