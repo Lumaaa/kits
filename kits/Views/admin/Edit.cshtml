@@ -9,7 +9,7 @@
     </div>
     
 
-    <div class="detailstext">
+    <div class="editstext">
         @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
@@ -17,14 +17,14 @@
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             @Html.HiddenFor(model => model.order_ID)
 
-        <div class="form-group ">
+        <div class="form-group editstate">
             @Html.LabelFor(model => model.users_ID, "Users", htmlAttributes: new { @class = "control-label col-md-2" }):
             @Html.DropDownList("users_ID", null, htmlAttributes: new { @class = "form-control editdrop" })
             @Html.DisplayFor(model => model.user.user_email)
             @Html.ValidationMessageFor(model => model.users_ID, "", new { @class = "text-danger" })
         </div>
 
-            <div class="form-group">
+            <div class="form-group editstate">
                 @Html.LabelFor(model => model.state_ID, "State", htmlAttributes: new { @class = "control-label col-md-2" }):
 
                 <span class="editstate">
@@ -37,14 +37,11 @@
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Save" class="btn btn-default edidtButtom" />
+                    <input type="button" class="edidtButtom" value="Back to list" onclick="location.href='@Url.Action("index")'"/>
                 </div>
             </div>
     
 }
-    </div>
-
-    <div>
-        @Html.ActionLink("Back to List", "Index")
     </div>
     </div>
     @section Scripts {

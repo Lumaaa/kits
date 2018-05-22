@@ -63,14 +63,14 @@
     .frontpage {
         display:inline-flex;
         flex-direction:row;
-        height: 600px;
+        height: 425px;
         width: 500px;
         align-items:center;
     }
     .shopping {
         flex-grow: 1;
         align-self: flex-start;
-        height: 600px;
+        height: 400px;
         width: 250px;
         margin-left: 0;
     }
@@ -80,7 +80,7 @@
            
         }
         .shopping .btn {
-            top: 25%;
+            top: 30%;
             left: 50%;
             font-size: 16px;
             padding: 12px 24px;
@@ -91,30 +91,29 @@
         display: flex;
         flex-direction: column;
         align-self: flex-start;
-        height: 600px;
-        width: 160px;
-        
-        padding-left: 10px;
+        height: 400px;
+        width: 200px;      
+        padding-left: 5px;
     }
 
     .service {
         flex-grow: 1;
         align-self: flex-start;
-        height: 150px;
-        width: 150px;
+        height: 193px;
+        width: 180px;
         margin-left: 0;
     }
 
         .service img {
-            width: 100%;
-            height: auto;
+            width: 160px;
+            height: 195px;
         }
             .service img :hover{
                 color:#000000;
             }
             .service .btn {
-                top: 65%;
-                left: 50%;
+                top: 60%;
+                left: 45%;
                 font-size: 16px;
                 padding: 12px 24px;
             }
@@ -122,21 +121,21 @@
     .about {
         flex-grow: 2;
         align-self: flex-start;
-        height: 200px;
-        width: 150px;
-        
-        padding-top: 10px;
+        height: 180px;
+        width: 200px;
+        padding-top: -5px;
+     
     }
 
         .about img {
-            width: 100%;
-            height: auto;
+            width: 160px;
+            height: 195px;
             /*margin: -0% 0 0 -14%;*/
             top: 0;
         }
     .about .btn {
-        top: 15%;
-        left: 50%;
+        top: 50%;
+        left: 45%;
         font-size: 16px;
         padding: 12px 24px;
     }
@@ -158,6 +157,7 @@
         width: 100%;
         text-align: center;
         padding-top: 2px;
+        height: 50px;
     }
     table {
         width: 80%;
@@ -223,21 +223,31 @@
     }
     /*admin edit view*/
     .editview{
-        width:300px;
+        width:400px;
+        height: 274px;
     
+    }
+    .editstext{
+
     } 
     .editstate {
-        
+        top: 10px;
+        height:75px;
     }
     .editdrop {
         padding-left: 10px;
         width: 150px;
         height: 30px;
         border-radius: 10px;
+       
     }
     .edidtButtom {
         margin-top: 10px;
         width: 150px;
         border-radius: 10px;
+        background-color: #98DDFE;
+        color: #000000;
+        padding: 12px 24px;
+        border: none;
     }
  }
