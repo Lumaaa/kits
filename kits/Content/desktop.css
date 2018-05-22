@@ -210,16 +210,25 @@
         align-items: center;
         padding-left: 25px;
     }
-/*admin details view*/
 
-    .detailsview{
-        align-items:center;      
+    /*admin details view*/
+    .detailsview {
+        align-items: center;
+        height: auto;
     }
     .detailstext{
+        height:75px;
+        padding-bottom:10px;
     
+    }
+    .detailsbuttonview{
+        height: 100px;
+        text-align:center;
+
     }
     .detailstable{
         width: 500px;
+        
     }
     /*admin edit view*/
     .editview{
@@ -241,6 +250,27 @@
         border-radius: 10px;
        
     }
+
+
+/*delet view admin*/
+    .deletview{
+        width: 400px;
+
+    }
+    .deleteText {
+        height: 100px;
+       
+    }
+/*buttom*/
+    .indexButtom {
+        margin-top: 5px;
+        width: 75px;
+        border-radius: 10px;
+        background-color: #98DDFE;
+        color: #000000;
+        padding: 12px 24px;
+        border: none;
+    }
     .edidtButtom {
         margin-top: 10px;
         width: 150px;
@@ -249,5 +279,13 @@
         color: #000000;
         padding: 12px 24px;
         border: none;
+    }
+
+    .delete {
+        background-color: #ff0000;
+    }
+
+    .det {
+        background-color: #FCF379;
     }
  }
