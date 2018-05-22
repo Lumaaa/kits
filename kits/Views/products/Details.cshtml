@@ -4,13 +4,13 @@
     ViewBag.Title = "Details";
 }
 
-    
-    <div>
-    <img src="~/images/placeholder.jpg" class="personalimage" />
-    </div>
 
- 
-    <div class="text">
+<div>
+    <img src="~/images/placeholder.jpg" class="personalimage" />
+</div>
+
+
+<div class="text">
     <div>Name</div>
     <div>@Html.DisplayFor(model => model.product_name)</div>
     <br />
@@ -35,66 +35,48 @@
         </div>
 
         <br />
-        
+
         <div class="details">
-            <span>
-                XS
-            </span>
-            <span>
-                S
-            </span>
-            <span>
-                M
-            </span>
-            <span>
-                L
-            </span>
-            <span>
-                XL
-            </span>
-
-
+            @if (Model.XS > 0)
+            { <span> XS </span> }
+            @if (Model.S > 0)
+            { <span> S </span> }
+            @if (Model.M > 0)
+            { <span> M </span> }
+            @if (Model.L > 0)
+            { <span> L </span> }
+            @if (Model.XL > 0)
+            { <span> XL </span> }
         </div>
-
-
-        <div >
-            
-            
-
+        <div>
             <span>Size </span>
-
-            
-
             <span>
                 @using (Html.BeginForm())
             {
                     @Html.DropDownList("sizes", "Select size") }
-                   
-
             </span>
         </div>
     </div>
 
 
-        <div style="width:100%;">
-            @using (Html.BeginForm("AddToCart", "Cart"))
+    <div style="width:100%;">
+        @using (Html.BeginForm("AddToCart", "Cart"))
             {
-                @Html.Hidden("ProductId", Model.product_ID)
-                @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-                <input type="submit" class="button" value="Add to cart" />
-            }
-        </div>
+            @Html.Hidden("ProductId", Model.product_ID)
+            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+            <input type="submit" class="button" value="Add to cart" />
+        }
+    </div>
 
 </div>
-    <br>
+<br>
 
 <script>
 
 
 
 </script>
-    
 
 
-           
-    
+
+

@@ -87,16 +87,8 @@
     <Property Name="user_lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="user_phone" Type="Int32" />
     <NavigationProperty Name="orders" Relationship="Self.FK__orders__users_ID__52593CB8" FromRole="users" ToRole="orders" />
-    <Property Name="zipcode" Type="Int32" />
-    <NavigationProperty Name="zipcode1" Relationship="kitsModel.FK__users__zipcode__5812160E" FromRole="user" ToRole="zipcode" />
-  </EntityType>
-  <EntityType Name="zipcode">
-    <Key>
-      <PropertyRef Name="zipcode1" />
-    </Key>
-    <Property Name="zipcode1" Type="Int32" Nullable="false" />
-    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="users" Relationship="kitsModel.FK__users__zipcode__5812160E" FromRole="zipcode" ToRole="user" />
+    <Property Name="user_zipcode" Type="Int32" />
+    <Property Name="user_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK__product__brand_I__4BAC3F29">
     <End Role="brand" Type="Self.brand" Multiplicity="0..1" />
@@ -179,7 +171,6 @@
     <EntitySet Name="product_order" EntityType="Self.product_order" />
     <EntitySet Name="states" EntityType="Self.state" />
     <EntitySet Name="users" EntityType="Self.user" />
-    <EntitySet Name="zipcodes" EntityType="Self.zipcode" />
     <AssociationSet Name="FK__product__brand_I__4BAC3F29" Association="Self.FK__product__brand_I__4BAC3F29">
       <End Role="brand" EntitySet="brands" />
       <End Role="product" EntitySet="products" />
@@ -220,27 +211,11 @@
       <Parameter Name="address" Mode="In" Type="String" />
       <Parameter Name="phone" Mode="In" Type="Int32" />
     </FunctionImport>
-    <AssociationSet Name="FK__users__zipcode__5812160E" Association="kitsModel.FK__users__zipcode__5812160E">
-      <End Role="zipcode" EntitySet="zipcodes" />
-      <End Role="user" EntitySet="users" />
-    </AssociationSet>
     <AssociationSet Name="FK__product__image_I__59063A47" Association="kitsModel.FK__product__image_I__59063A47">
       <End Role="image" EntitySet="images" />
       <End Role="product" EntitySet="products" />
     </AssociationSet>
   </EntityContainer>
-  <Association Name="FK__users__zipcode__5812160E">
-    <End Type="kitsModel.zipcode" Role="zipcode" Multiplicity="0..1" />
-    <End Type="kitsModel.user" Role="user" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="zipcode">
-        <PropertyRef Name="zipcode1" />
-      </Principal>
-      <Dependent Role="user">
-        <PropertyRef Name="zipcode" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__product__image_I__59063A47">
     <End Type="kitsModel.image" Role="image" Multiplicity="0..1" />
     <End Type="kitsModel.product" Role="product" Multiplicity="*" />
