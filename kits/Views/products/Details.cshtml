@@ -4,52 +4,72 @@
     ViewBag.Title = "Details";
 }
 
-
-<div>
-    <img src="~/images/placeholder.jpg" class="personalimage" />
-</div>
-
-
-<div class="text">
-    <div>Name</div>
-    <div>@Html.DisplayFor(model => model.product_name)</div>
-    <br />
-    <div>Description</div>
-    <div>@Html.DisplayFor(model => model.product_description)</div>
-    <br />
-
-    <div class="shop">
+<br />
+<br />
+<br />
+<div class="wrapper">
+    <div class="grid-2x2">
         <div>
-            <div>
-                <span>Brand: </span>
-                <span> @Html.DisplayFor(model => model.brand.name) </span>
-            </div>
-            <div>
-                <span>Category: </span>
-                <span>@Html.DisplayFor(model => model.category.name)</span>
-            </div>
 
-            <div>
-                <span>Price: </span>
-                <span>@Html.DisplayFor(model => model.product_price)</span>
-            </div>
-        </div>
-        <div>
-            <span>Size </span>
-            <span>
-                @using (Html.BeginForm())
+            @if (Model.image == null)
             {
-                    @Html.DropDownList("sizes", "Select size") }
-            </span>
+                <img src="~/images/placeholder.jpg" class="shopimage" />
+            }
+            else
+            {
+                String imagepath = Model.image.imagestring + ".jpg";
+                <img src="~/Content/img/product/@imagepath" class="shopimage" />
+
+            }
+
+        </div>
+
+
+        <div class="text">
+
+            <div>Name</div>
+            <div>@Html.DisplayFor(model => model.product_name)</div>
+            <br />
+            <div>Description</div>
+            <div>@Html.DisplayFor(model => model.product_description)</div>
+            <br />
+
+            <div class="detailsshop">
+                <div>
+                    <div>
+                        <span>Brand: </span>
+                        <span> @Html.DisplayFor(model => model.brand.name) </span>
+                    </div>
+                    <div>
+                        <span>Category: </span>
+                        <span>@Html.DisplayFor(model => model.category.name)</span>
+                    </div>
+
+                    <div>
+                        <span>Price: </span>
+                        <span>@Html.DisplayFor(model => model.product_price)</span>
+                    </div>
+                </div>
+                <div>
+                    <span>Size </span>
+                    <span>
+                        @using (Html.BeginForm())
+            {
+                            @Html.DropDownList("sizes", "Select size") }
+                    </span>
+                </div>
+            </div>
+
+
+
+            <br />
+            <br />
+
+
         </div>
     </div>
-      
-       
 
-    <br />
-    <br />
-
-    <div style="width:100%;">
+    <div class="button">
         @using (Html.BeginForm("AddToCart", "Cart"))
             {
             @Html.Hidden("ProductId", Model.product_ID)
@@ -57,15 +77,12 @@
             <input type="submit" class="button" value="Add to cart" />
         }
     </div>
-
 </div>
-<br>
 
-<script>
+    <br />
+<br />
+<br />
 
-
-
-</script>
 
 
 

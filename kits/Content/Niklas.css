@@ -37,6 +37,15 @@
         grid-template-columns: repeat(2,1fr);
         width:100%;
     }
+    .detailsshop {
+        display: grid;
+        column-count: 2;
+        column-gap: 10px;
+        padding: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+    }
 
     .details {
         display: grid;
@@ -54,6 +63,14 @@
         text-align:center; 
         border-radius:2px;
 
+    }
+    .wrapper-button {
+        width: 100%;
+        margin: 5%;
+    }
+
+    .button-center {
+        text-align: center;
     }
 
     .product-price-text {
@@ -150,5 +167,15 @@
 
     .wrapper {
         margin: 2%;
+    }
+
+    .grid-5x5 {
+        display: grid;
+        column-count: 5;
+        column-gap: 10px;
+        padding: 20px;
+        text-align: center;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(5,1fr);
     }
 }
