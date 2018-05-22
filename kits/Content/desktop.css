@@ -64,8 +64,7 @@
         display:inline-flex;
         flex-direction:row;
         height: 600px;
-        width: 600px;
-        margin-left:0;
+        width: 500px;
         align-items:center;
     }
     .shopping {
