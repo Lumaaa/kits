@@ -147,6 +147,7 @@
 
     footer {
         height: 50px;
+        position:fixed;
     }
 
     /*burger menu*/
