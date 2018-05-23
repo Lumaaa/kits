@@ -44,6 +44,7 @@ section {
 }
 
 footer {
+    margin-top: 50px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -51,7 +52,6 @@ footer {
     color: #ffffff;
     align-items: center;
     flex-shrink: 0;
-    position: absolute;
     right: 0;
     bottom: 0;
     left: 0;

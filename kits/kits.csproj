@@ -263,10 +263,13 @@
     <Content Include="Content\helene.css" />
     <Content Include="Content\img\about.jpg" />
     <Content Include="Content\img\basket.png" />
+    <Content Include="Content\img\drycleaning.jpg" />
+    <Content Include="Content\img\egaa.jpg" />
     <Content Include="Content\img\img01.jpg" />
     <Content Include="Content\img\img02.jpg" />
     <Content Include="Content\img\img02.png" />
     <Content Include="Content\img\img03.jpg" />
+    <Content Include="Content\img\img03.png" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\personal\Annemette.jpg" />
     <Content Include="Content\img\personal\Annette.jpg" />
@@ -278,6 +281,7 @@
     <Content Include="Content\img\personal\Pia.jpg" />
     <Content Include="Content\img\personal\rikke.jpg" />
     <Content Include="Content\img\personal\sarah.jpg" />
+    <Content Include="Content\img\placeholder.jpg" />
     <Content Include="Content\img\product\blackyellowdress.jpg" />
     <Content Include="Content\img\product\bluedress.jpg" />
     <Content Include="Content\img\product\bluetop.jpg" />
@@ -297,11 +301,15 @@
     <Content Include="Content\img\product\winterjacket.jpg" />
     <Content Include="Content\img\product\yellowtop.jpg" />
     <Content Include="Content\img\services.jpg" />
+    <Content Include="Content\img\skejby.jpg" />
+    <Content Include="Content\img\tailoring.jpg" />
     <Content Include="Content\img\webshop.jpg" />
+    <Content Include="Content\img\webshop01.png" />
     <Content Include="Content\ministyle.css" />
     <Content Include="Content\mobile.css" />
     <Content Include="Content\navbar.css" />
     <Content Include="Content\niklas.css" />
+    <Content Include="Content\niklasdesktop.css" />
     <Content Include="Content\reset.css" />
     <Content Include="Content\styles.css" />
     <Content Include="Content\tablet.css" />
