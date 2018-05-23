@@ -17,7 +17,7 @@
         <br />
         <br />
         <div class="button-center">
-            <input type="submit" class="button" value="Continue shopping" onclick="location.href = '@(Url.Action("Index", "products", null))'" />
+            <input type="submit" class="button blue" value="Continue shopping" onclick="location.href = '@(Url.Action("Index", "products", null))'" />
             @*@Html.ActionLink("Continue shopping", "Index", "products", null, new { @class = "btn btn-primary" })*@
         </div>
         <br />
@@ -28,8 +28,10 @@
 }
 else
 {
-    <h2>Checkout</h2>
-    <h3>Your order</h3>
+    <br />
+    <br />
+    <div class="titletext ">Checkout</div>
+    
     <div class="wrapper-button">
         <div class="grid-4x4">
             @foreach (var product in cart.Products)
@@ -154,14 +156,14 @@ else
                 
                     <div class="form-group mobilehidden" >
                         
-                            <input type="submit" value="Place order" class="button"  />
+                            <input type="submit" value="Place order" class="button blue"  />
                         
                     </div>
                
             </div>
             <div class="form-group desktophidden">
                 <br />
-                <input type="submit" value="Place order" class="button" />
+                <input type="submit" value="Place order" class="button blue" />
 
             </div>
             </div>

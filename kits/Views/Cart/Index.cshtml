@@ -7,8 +7,15 @@
 @if (Model.Cart.Products.Count == 0)
 {
     <br />
-    <h2> Your cart is empty </h2>
-    @Html.ActionLink("Continue shopping", "Index", "products", null, new { @class = "btn btn-primary" })
+    <div class="wrapper-button">
+        <div class="titletext">Your cart is empty </div>
+        <br />
+        <br />
+
+        <div class="button button-center">
+            @Html.ActionLink("Continue shopping", "Index", "products", null, new { @class = "button blue" })
+        </div>
+    </div>
 }
 else
 {
@@ -47,7 +54,7 @@ else
                     {
                             @Html.Hidden("ProductId", product.product_ID)
                             @Html.HiddenFor(x => x.ReturnUrl)
-                            <input type="submit" value="Remove" />
+                            <input type="submit" class="red button" value="Remove" />
                         }
                     </div>
 
@@ -66,13 +73,13 @@ else
     </div>
         <div class="wrapper-button">
             <div class="button-center">
-                <input type="submit" class="button" value="Continue shopping" onclick="location.href = '@(Url.Action("Index", "products", null))'" />
+                <input type="submit" class="button blue" value="Continue shopping" onclick="location.href = '@(Url.Action("Index", "products", null))'" />
                 @*@Html.ActionLink("Continue shopping", "Index", "products", null, new { @class = "btn btn-primary" })*@
             </div>
             <br />
             
             <div class="button-center">
-                <input type="submit" class="button" value="Check out" onclick="location.href = '@(Url.Action("Index", "CartCheckout", null))'" />
+                <input type="submit" class="button blue" value="Check out" onclick="location.href = '@(Url.Action("Index", "CartCheckout", null))'" />
                 @*@Html.ActionLink("Checkout", "Index", "CartCheckout", null, new { @class = "btn btn-success" })*@
 
             </div>

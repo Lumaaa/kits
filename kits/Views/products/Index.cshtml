@@ -14,8 +14,8 @@
     <div class="filterdropdown">
         @using (Html.BeginForm())
         {
-            @Html.DropDownList("CategoryId", "All categories")
-            <button type="submit"> Filter </button>
+            @Html.DropDownList("CategoryId",null, "All categories",new { @class ="editdrop" })
+            <button class="yellow filterbutton" type="submit"> Filter </button>
         }
     </div>
 </div>
