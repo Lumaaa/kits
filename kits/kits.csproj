@@ -261,15 +261,12 @@
   <ItemGroup>
     <Content Include="Content\desktop.css" />
     <Content Include="Content\helene.css" />
-    <Content Include="Content\img\about.jpg" />
+    <Content Include="Content\img\about_.jpg" />
+    <Content Include="Content\img\about_new.jpg" />
+    <Content Include="Content\img\about__.jpg" />
     <Content Include="Content\img\basket.png" />
     <Content Include="Content\img\drycleaning.jpg" />
     <Content Include="Content\img\egaa.jpg" />
-    <Content Include="Content\img\img01.jpg" />
-    <Content Include="Content\img\img02.jpg" />
-    <Content Include="Content\img\img02.png" />
-    <Content Include="Content\img\img03.jpg" />
-    <Content Include="Content\img\img03.png" />
     <Content Include="Content\img\logo.png" />
     <Content Include="Content\img\personal\Annemette.jpg" />
     <Content Include="Content\img\personal\Annette.jpg" />
@@ -300,11 +297,13 @@
     <Content Include="Content\img\product\whitedress.jpg" />
     <Content Include="Content\img\product\winterjacket.jpg" />
     <Content Include="Content\img\product\yellowtop.jpg" />
-    <Content Include="Content\img\services.jpg" />
+    <Content Include="Content\img\services_.jpg" />
+    <Content Include="Content\img\services_new.jpg" />
+    <Content Include="Content\img\services__.jpg" />
     <Content Include="Content\img\skejby.jpg" />
     <Content Include="Content\img\tailoring.jpg" />
-    <Content Include="Content\img\webshop.jpg" />
-    <Content Include="Content\img\webshop01.png" />
+    <Content Include="Content\img\webshop_.jpg" />
+    <Content Include="Content\img\webshop_new.jpg" />
     <Content Include="Content\ministyle.css" />
     <Content Include="Content\mobile.css" />
     <Content Include="Content\navbar.css" />

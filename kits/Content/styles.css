@@ -70,12 +70,8 @@ footer {
 }
 
     .shopping img {
-        border: solid #000000;
     }
 
-        .shopping img:hover {
-            background-color: #ddd;
-        }
 
     .shopping .btn {
         position: absolute;
@@ -103,8 +99,6 @@ footer {
 }
 
     .about img {
-        height: auto;
-        border: solid #000000;
     }
 
     .about .btn {
@@ -126,13 +120,9 @@ footer {
 
 .service {
     position: relative;
- 
 }
 
     .service img {
-
-        height: auto;
-        border: solid #000000;
     }
 
     .service .btn {
