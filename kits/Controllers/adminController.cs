@@ -13,7 +13,7 @@ namespace kits.Controllers
 {
     public class adminController : Controller
     {
-        private kitsEntities db = new kitsEntities();
+        private kitsEntities1 db = new kitsEntities1();
 
         // GET: orders
         public ActionResult Index()

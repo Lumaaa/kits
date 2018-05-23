@@ -1,105 +1,300 @@
-@media only screen and (min-width : 1025px) {
+@media only screen and (min-width : 601px) {
     header {
-        height: 100px;
-        width:100%;
+        width: 100%;
+        height: 75px;
+        margin-top: 10px;
     }
-    #navbar{
 
-    }
-        #navbar ul {
-            list-style: none;
-        }
-        #navbar ul li {
-            display: flex;
-        }
     .topLogo {
-    }
+        width: 100%;
+        height: 40px;
 
+    }
+    .one{
+        display:none;
+    } 
     .logo {
- 
+        width: 75px;
+        height: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        top: 1%;
     }
 
     nav {
-   
+        width: 94%;
+        height: 50px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        float: left;
     }
+
+        nav ul {
+            width: 100%;
+            list-style: none;
+        }
+
+            nav ul li {
+                display: inline-block;
+                margin-right: 5%;
+            }
 
     .basket {
- 
+        width: 6%;
+        align-items: center;
     }
 
-        .basket i {
-        }
+    .fa-3x {
+        display: none;
+    }
 
     .fa-2x {
         display: none;
     }
 
     .fa-1x {
-        display: none;
+        /*display: none;*/
     }
 
     section {
- 
     }
 
-    footer {
-
+    .frontpage {
+        display: inline-flex;
+        flex-direction: row;
+        height: 425px;
+        width: 500px;
+        align-items: center;
     }
-
-        footer a {
-       
-        }
-
 
     .shopping {
-
+        flex-grow: 1;
+        align-self: flex-start;
+        height: 400px;
+        width: 250px;
+        margin-left: 0;
     }
 
         .shopping img {
-
+            width: 100%;
+            height: auto;
         }
 
         .shopping .btn {
-  
+            top: 30%;
+            left: 50%;
+            font-size: 16px;
+            padding: 12px 24px;
         }
-
 
     .other {
- 
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        height: 400px;
+        width: 200px;
+        margin-left: 5px;
     }
-
-    .about {
-   
-    }
-
-        .about img {
- 
-        }
-
-        .about .btn {
-
-        }
-
-
 
     .service {
-
+        flex-grow: 1;
+        align-self: flex-start;
+        height: 193px;
+        width: 180px;
+        margin-left: 0;
     }
 
         .service img {
-   
+            width: 160px;
+            height: 195px;
         }
+
+            .service img :hover {
+                color: #000000;
+            }
 
         .service .btn {
-
+            top: 60%;
+            left: 45%;
+            font-size: 16px;
+            padding: 12px 24px;
         }
+
+    .about {
+        flex-grow: 2;
+        align-self: flex-start;
+        height: 180px;
+        width: 200px;
+        padding-top: -px;
+    }
+
+        .about img {
+            width: 160px;
+            height: 195px;
+            /*margin: -0% 0 0 -14%;*/
+            top: 0;
+        }
+
+        .about .btn {
+            top: 50%;
+            left: 45%;
+            font-size: 16px;
+            padding: 12px 24px;
+        }
+
+    footer {
+        height: 50px;
+        position:fixed;
+    }
 
     /*burger menu*/
     #menuToggle {
         display: none;
     }
+
     .googlemaps {
         width: 100%;
         height: auto;
     }
- }
+
+    /*index admin overview*/
+    .head {
+        width: 100%;
+        text-align: center;
+        padding-top: 2px;
+        height: 50px;
+    }
+
+    table {
+        width: 80%;
+    }
+
+        table th {
+            height: 50px;
+            background-color: #000000;
+            color: white;
+            vertical-align: middle;
+        }
+
+        table th, td {
+            padding: 5px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table td {
+            vertical-align: middle;
+            height: 60px;
+        }
+
+    tr:nth-child(even) {
+        background-color: #f5f5f5;
+    }
+
+    .overview {
+        display: inline-flex;
+        flex-direction: row;
+        text-align: start;
+        width: 900px;
+        padding-bottom: 10px;
+    }
+
+    .processing {
+        flex-grow: 1;
+        order: 1;
+        text-align: center;
+        width: 400px;
+        align-items: center;
+        padding-left: 25px;
+    }
+
+    .completed {
+        flex-grow: 2;
+        order: 2;
+        text-align: center;
+        width: 390px;
+        align-items: center;
+        padding-left: 25px;
+    }
+
+    /*admin details view*/
+    .detailsview {
+        align-items: center;
+        height: auto;
+    }
+
+    .detailstext {
+        height: 75px;
+        padding-bottom: 10px;
+    }
+
+    .detailsbuttonview {
+        height: 100px;
+        text-align: center;
+    }
+
+    .detailstable {
+        width: 500px;
+    }
+    /*admin edit view*/
+    .editview {
+        width: 400px;
+        height: 274px;
+    }
+
+    .editstext {
+    }
+
+    .editstate {
+        top: 10px;
+        height: 75px;
+    }
+
+    .editdrop {
+        padding-left: 10px;
+        width: 150px;
+        height: 30px;
+        border-radius: 10px;
+    }
+
+
+    /*delet view admin*/
+    .deletview {
+        width: 400px;
+    }
+
+    .deleteText {
+        height: 100px;
+    }
+    /*buttom*/
+    .indexButtom {
+        margin-top: 5px;
+        width: 75px;
+        border-radius: 10px;
+        background-color: #98DDFE;
+        color: #000000;
+        padding: 12px 24px;
+        border: none;
+    }
+
+    .edidtButtom {
+        margin-top: 10px;
+        width: 150px;
+        border-radius: 10px;
+        background-color: #98DDFE;
+        color: #000000;
+        padding: 12px 24px;
+        border: none;
+    }
+
+    .delete {
+        background-color: #ff0000;
+    }
+
+    .det {
+        background-color: #FCF379;
+    }
+}

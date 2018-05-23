@@ -10,7 +10,7 @@ namespace kits.Controllers
 {
     public class CartCheckoutController : Controller
     {
-        private kitsEntities db = new kitsEntities();
+        private kitsEntities1 db = new kitsEntities1();
 
 
         public ActionResult Index(Cart cart, user user)

@@ -12,7 +12,7 @@ namespace kits.Controllers
 {
     public class productsController : Controller
     {
-        private kitsEntities db = new kitsEntities();
+        private kitsEntities1 db = new kitsEntities1();
         private IEnumerable<product> products = new List<product>();
         private List<SelectListItem> categories = new List<SelectListItem>();
 

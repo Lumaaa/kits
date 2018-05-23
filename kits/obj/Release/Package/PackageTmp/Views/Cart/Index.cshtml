@@ -6,70 +6,87 @@
 }
 @if (Model.Cart.Products.Count == 0)
 {
-    <h2> Your cart is empty </h2>
-    @Html.ActionLink("Continue shopping", "Index", "products", null, new { @class = "btn btn-primary" })
+    <br />
+    <div class="wrapper-button">
+        <div class="titletext">Your cart is empty </div>
+        <br />
+        <br />
+
+        <div class="button button-center">
+            @Html.ActionLink("Continue shopping", "Index", "products", null, new { @class = "button blue" })
+        </div>
+    </div>
 }
 else
 {
-    <div>
+    <br />
+    <div class=" wrapper-button">
         <div class="titletext"> Your cart </div>
-        <table>
+
+        <div class="grid-5x5">
             @foreach (var product in Model.Cart.Products)
             {
-                <tr>
-                    <td>
-                        <img src="~/images/placeholder.jpg" style="width:100px;" />
-                    </td>
-                    <td>
-                        <h4>@Html.DisplayFor(modelItem => product.product_name)</h4>
-                        @*<p>@Html.DisplayFor(modelItem => product.brand.name)</p>*@
-                    </td>
-                    <td>
+
+                <div class="griditem">
+                    @if (product.image == null)
+                    {
+                        <img src="~/images/placeholder.jpg" class="shopimage" />
+                    }
+                    else
+                    {
+                        String imagepath = product.image.imagestring + ".jpg";
+                        <img src="~/Content/img/product/@imagepath" class="shopimage" />
+
+                    }
+                </div>
+                <div class="griditem">
+                    @Html.DisplayFor(modelItem => product.product_name)
+                    @*<p>@Html.DisplayFor(modelItem => product.brand.name)</p>*@
+                </div>
+                    <div class="griditem">
                         S
-                    </td>
-                    <td>
+                    </div>
+                    <div class="griditem">
                         @Html.DisplayFor(modelItem => product.product_price) DKK
-                    </td>
-                    <td style="text-align:right">
+                    </div>
+                    <div class="griditem">
                         @using (Html.BeginForm("RemoveFromCart", "Cart"))
                     {
                             @Html.Hidden("ProductId", product.product_ID)
                             @Html.HiddenFor(x => x.ReturnUrl)
-                            <input type="submit" value="Remove" />
+                            <input type="submit" class="red button" value="Remove" />
                         }
-                    </td>
-                </tr>
-            }
-        </table>
-    </div>
-    <br />
-    <br />
+                    </div>
 
-    <div style="width:100%; padding:20px;">
-        <div class="cartprice">
-        
-        Total: @Model.Cart.TotalPrice.ToString("n") DKK
+            }
         </div>
 
         <br />
         <br />
-       
-        <div >
-            <div >
-                <input type="submit" class="button" value="Continue shopping" onclick="location.href = '@(Url.Action("Index", "products", null))'" />
+        <div class="grid-5x5">
+            <div></div><div></div><div></div><div></div>
+            <div>
+                <p>Total: @Model.Cart.TotalPrice.ToString("n") DKK</p>
+            </div>
+        </div>
+        
+    </div>
+        <div class="wrapper-button">
+            <div class="button-center">
+                <input type="submit" class="button blue" value="Continue shopping" onclick="location.href = '@(Url.Action("Index", "products", null))'" />
                 @*@Html.ActionLink("Continue shopping", "Index", "products", null, new { @class = "btn btn-primary" })*@
             </div>
             <br />
             
-            <div>
-                <input type="submit" class="button" value="Check out" onclick="location.href = '@(Url.Action("Index", "CartCheckout", null))'" />
+            <div class="button-center">
+                <input type="submit" class="button blue" value="Check out" onclick="location.href = '@(Url.Action("Index", "CartCheckout", null))'" />
                 @*@Html.ActionLink("Checkout", "Index", "CartCheckout", null, new { @class = "btn btn-success" })*@
 
             </div>
             <br />
         </div>
 
-    </div>
+  
 
 
 

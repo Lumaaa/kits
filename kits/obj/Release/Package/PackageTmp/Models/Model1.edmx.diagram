@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="de25963f2f0547a4a8c54db9feaa2434" Name="Diagram1">
+        <EntityTypeShape EntityType="kitsModel.brand" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.category" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.image" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.order" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.product" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.product_order" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.state" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.sysdiagram" Width="1.5" PointX="5.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="kitsModel.user" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <AssociationConnector Association="kitsModel.FK__product__brand_I__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="kitsModel.FK__product__categor__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="kitsModel.FK__product__image_I__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="kitsModel.FK__orders__state_ID__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="kitsModel.FK__orders__users_ID__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="kitsModel.FK__product_o__order__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="kitsModel.FK__product_o__produ__571DF1D5" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

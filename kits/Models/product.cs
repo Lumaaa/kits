@@ -35,8 +35,8 @@ namespace kits.Models
     
         public virtual brand brand { get; set; }
         public virtual category category { get; set; }
+        public virtual image image { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<product_order> product_order { get; set; }
-        public virtual image image { get; set; }
     }
 }

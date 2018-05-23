@@ -10,7 +10,7 @@ namespace kits.Controllers
 {
     public class CartController : Controller
     {
-        private kitsEntities db = new kitsEntities();
+        private kitsEntities1 db = new kitsEntities1();
 
         public ViewResult Index(Cart cart, string returnUrl)
         {
