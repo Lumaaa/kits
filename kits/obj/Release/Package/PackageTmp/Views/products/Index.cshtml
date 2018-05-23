@@ -1,0 +1,50 @@
+﻿@using kits.Models;
+
+
+
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<div style="width:100%;">
+    <div class="headertext">Kits Shop</div>
+    <br />
+    <br />
+
+    <div class="filterdropdown">
+        @using (Html.BeginForm())
+        {
+            @Html.DropDownList("CategoryId",null, "All categories",new { @class ="editdrop" })
+            <button class="yellow filterbutton" type="submit"> Filter </button>
+        }
+    </div>
+</div>
+@helper RenderProduct(product product)
+{
+    <div class="clickable" onclick="location.href = '@(Url.Action("Details", "products", new { id = product.product_ID }))'">
+        
+        @if (product.image == null)
+        {
+            <img src="~/images/placeholder.jpg" class="shopimage" />
+        }
+        else
+        {
+            String imagepath = product.image.imagestring + ".jpg"; 
+            <img src="~/Content/img/product/@imagepath" class="shopimage" />
+            
+        }
+        
+        <div class="product-name-text">
+            @Html.DisplayFor(modelItem => product.product_name)
+        </div>
+        <div class="product-price-text">
+            @Html.DisplayFor(modelItem => product.product_price)
+        </div>
+    </div>
+}
+<div class="shop">
+    @foreach (var product in ViewBag.Products)
+    {
+        @RenderProduct(product)
+    }
+</div>

@@ -2,7 +2,6 @@ body {
     font-family: 'Roboto Slab', sans-serif;
     background-color: #ffffff;
     color: #000000;
-
 }
 
 h1 {
@@ -41,9 +40,11 @@ section {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+   
 }
 
 footer {
+    margin-top: 50px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -51,6 +52,10 @@ footer {
     color: #ffffff;
     align-items: center;
     flex-shrink: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
     /*bottom: 0;*/
     /*position:absolute;*/
 }

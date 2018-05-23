@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Kits.dk </title>
+    <link rel="shortcut icon" type="image/png" href="~/Content/img/logo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    @Styles.Render("~/Content/ministyle.css")
+</head>
+<body>
+    <div class="content">
+        <header>
+
+            <a class="topLogo one" href="@Url.Action("Index", "Home")">
+                <img src="~/Content/img/logo.png" alt="logo" class='logo' />
+            </a>
+
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li> @Html.ActionLink("Shop", "Index", "products")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                    </ul>
+                </div>
+
+                <ul class="navbar">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li> @Html.ActionLink("Shop", "Index", "products")</li>
+                    <li>
+                        <a class="topLogo" href="@Url.Action("Index", "Home")">
+                            <img src="~/Content/img/logo.png" alt="logo" class='logo' />
+                        </a>
+                    </li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                    <li>
+                        <span class='basket'>
+                            <a href="@Url.Action("Index", "Cart")">
+                                <i class="fas fa-shopping-basket fa-1x"></i>
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+
+            <span class='basket one'>
+                <a href="@Url.Action("Index", "Cart")">
+                    <i class="fas fa-shopping-basket fa-1x"></i>
+                    <i class="fas fa-shopping-basket fa-2x"></i>
+                    <i class="fas fa-shopping-basket fa-3x"></i>
+                </a>
+            </span>
+
+        </header>
+        <section>
+            @RenderBody()
+        </section>
+        <footer>
+            <span>
+                &copy; @Html.ActionLink("Kits.dk", "index", "Home")
+            </span>
+            <span>@Html.ActionLink("Terms and conditions", "Services", "Home")</span>
+            <span>@Html.ActionLink("Contact", "Contact", "Home")</span>
+            <span>@Html.ActionLink("Admin", "Index", "admin")</span>
+        </footer>
+    </div>
+    @Scripts.Render("~/Scripts/navbar.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

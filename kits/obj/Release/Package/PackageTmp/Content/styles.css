@@ -1,0 +1,153 @@
+body {
+    font-family: 'Roboto Slab', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: #000000;
+}
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.topLogo {
+ 
+}
+
+.logo {
+}
+
+.basket {
+}
+
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+   
+}
+
+footer {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: #000000;
+    color: #ffffff;
+    align-items: center;
+    flex-shrink: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    /*bottom: 0;*/
+    /*position:absolute;*/
+}
+
+    footer a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+.shopping {
+    position: relative;
+}
+
+    .shopping img {
+        border: solid #000000;
+    }
+
+        .shopping img:hover {
+            background-color: #ddd;
+        }
+
+    .shopping .btn {
+        position: absolute;
+
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+        .shopping .btn:hover {
+            background-color: #ddd;
+        }
+
+.other {
+}
+
+.about {
+    position: relative;
+}
+
+    .about img {
+        height: auto;
+        border: solid #000000;
+    }
+
+    .about .btn {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+        .about .btn:hover {
+            background-color: #ddd;
+        }
+
+.service {
+    position: relative;
+ 
+}
+
+    .service img {
+
+        height: auto;
+        border: solid #000000;
+    }
+
+    .service .btn {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+        .service .btn:hover {
+            background-color: #ddd;
+        }

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<kits.Models.order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<section class="overview">
+    <div class="head"><h2>Orders</h2></div>
+    
+    <div class="processing">
+        <h2>Processing order</h2>
+        <table>
+            <tr>
+                <th>User email</th>
+                <th>Order state</th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model )
+            {
+                if (item.state.name.Equals("processing")) { 
+     <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.user.user_email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.state.name)
+            </td>
+            <td>
+                <input type="button" class="indexButtom" value="Edit" onclick="location.href='@Url.Action("Edit", new { id =item.order_ID })'" />
+
+                <br />
+                <input type="button" class="indexButtom det" value="Details" onclick="location.href='@Url.Action("Details", new { id =item.order_ID })'" />
+
+                <br />
+                <input type="button" class="indexButtom delete" value="Delete" onclick="location.href='@Url.Action("Delete", new { id =item.order_ID })'" />
+            </td>
+        </tr>
+                }
+            }
+
+        </table>
+    </div>
+    <div class="completed">
+        <h2>Completed order</h2>
+        <table>
+            <tr>
+                <th>User email</th>
+                <th>Order state</th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                if (item.state.name.Equals("completed"))
+                {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.user.user_email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.state.name)
+                </td>
+                <td>
+                    <input type="button" class="indexButtom" value="Edit" onclick="location.href='@Url.Action("Edit", new { id =item.order_ID })'" />
+                    
+                    <br />
+                    <input type="button" class="indexButtom det" value="Details" onclick="location.href='@Url.Action("Details", new { id =item.order_ID })'" />
+                  
+                    <br />
+                    <input type="button" class="indexButtom delete" value="Delete" onclick="location.href='@Url.Action("Delete", new { id =item.order_ID })'" />
+                   
+                </td>
+            </tr>
+                }
+            }
+
+        </table>
+    </div>
+
+</section>
+
+

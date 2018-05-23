@@ -1,0 +1,93 @@
+﻿<!-- Using a strongly typed view -->
+
+@model kits.ViewModels.CartIndexViewModel
+@{
+    ViewBag.Title = "Kits: Your Cart";
+}
+@if (Model.Cart.Products.Count == 0)
+{
+    <br />
+    <div class="wrapper-button">
+        <div class="titletext">Your cart is empty </div>
+        <br />
+        <br />
+
+        <div class="button button-center">
+            @Html.ActionLink("Continue shopping", "Index", "products", null, new { @class = "button blue" })
+        </div>
+    </div>
+}
+else
+{
+    <br />
+    <div class=" wrapper-button">
+        <div class="titletext"> Your cart </div>
+
+        <div class="grid-5x5">
+            @foreach (var product in Model.Cart.Products)
+            {
+
+                <div class="griditem">
+                    @if (product.image == null)
+                    {
+                        <img src="~/images/placeholder.jpg" class="shopimage" />
+                    }
+                    else
+                    {
+                        String imagepath = product.image.imagestring + ".jpg";
+                        <img src="~/Content/img/product/@imagepath" class="shopimage" />
+
+                    }
+                </div>
+                <div class="griditem">
+                    @Html.DisplayFor(modelItem => product.product_name)
+                    @*<p>@Html.DisplayFor(modelItem => product.brand.name)</p>*@
+                </div>
+                    <div class="griditem">
+                        S
+                    </div>
+                    <div class="griditem">
+                        @Html.DisplayFor(modelItem => product.product_price) DKK
+                    </div>
+                    <div class="griditem">
+                        @using (Html.BeginForm("RemoveFromCart", "Cart"))
+                    {
+                            @Html.Hidden("ProductId", product.product_ID)
+                            @Html.HiddenFor(x => x.ReturnUrl)
+                            <input type="submit" class="red button" value="Remove" />
+                        }
+                    </div>
+
+            }
+        </div>
+
+        <br />
+        <br />
+        <div class="grid-5x5">
+            <div></div><div></div><div></div><div></div>
+            <div>
+                <p>Total: @Model.Cart.TotalPrice.ToString("n") DKK</p>
+            </div>
+        </div>
+        
+    </div>
+        <div class="wrapper-button">
+            <div class="button-center">
+                <input type="submit" class="button blue" value="Continue shopping" onclick="location.href = '@(Url.Action("Index", "products", null))'" />
+                @*@Html.ActionLink("Continue shopping", "Index", "products", null, new { @class = "btn btn-primary" })*@
+            </div>
+            <br />
+            
+            <div class="button-center">
+                <input type="submit" class="button blue" value="Check out" onclick="location.href = '@(Url.Action("Index", "CartCheckout", null))'" />
+                @*@Html.ActionLink("Checkout", "Index", "CartCheckout", null, new { @class = "btn btn-success" })*@
+
+            </div>
+            <br />
+        </div>
+
+  
+
+
+
+}

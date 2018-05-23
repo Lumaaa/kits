@@ -1,0 +1,248 @@
+﻿@media screen and (max-width: 600px) {
+
+    .personal {
+        display: grid;
+        column-count: 2;
+        column-gap: 10px;
+        padding: 20px;
+        text-align:center;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .personalimage {
+        height: 150px;
+        width: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    td {
+        text-align: left;
+        border-bottom:solid; 
+        border-bottom-width:1px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 10px;
+        padding: 10px;
+        line-height: 12px;
+    }
+
+    .shop {
+        display: grid;
+        column-count: 2;
+        column-gap: 10px;
+        padding: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(2,1fr);
+        width:100%;
+    }
+    .detailsshop {
+        display: grid;
+        column-count: 2;
+        column-gap: 10px;
+        padding: 20px;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+    }
+
+    .details {
+        display: grid;
+  
+        border:solid;
+        text-align:center;
+        grid-template-columns: repeat(5,1fr);
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        padding: 20px;
+        align-content: center;
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+    }
+    .wrapper-button {
+        width: 100%;
+        margin: 5%;
+    }
+
+    .button-center {
+        text-align: center;
+    }
+
+    .product-price-text {
+        font-family: 'Roboto Slab', serif;
+        background-color: #ffffff;
+        color: #000000;
+        text-align: start;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-right: 5px;
+    }
+    .product-name-text {
+        font-family: 'Roboto Slab', serif;
+        background-color: #ffffff;
+        color: #000000;
+        text-align: start;
+        font-size: 12px;
+        padding:5px;
+    }
+
+    .td-show-hide {
+        display: none;
+    }
+
+    tr {
+       
+        vertical-align: middle;
+    }
+
+    .shopimage {
+        height: 100px;
+        width: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .filterdropdown {
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: end;
+    }
+
+    .personaltext {
+        font-family: 'Roboto Slab', serif;
+        background-color: #ffffff;
+        color: #000000;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .webimage {
+        max-width: 100%;
+    }
+
+    .cartprice{
+        padding-top:20px;
+        width:100%;
+        text-align:end;
+    }
+
+    .text {
+        font-family: 'Roboto Slab', serif;
+        background-color: #ffffff;
+        color: #000000;
+        margin: 0;
+        line-height: 20px;
+        font-size: 12px;
+        word-wrap: break-word;
+    }
+
+    .titletext {
+        font-family: 'Roboto Slab', serif;
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 18px;
+        
+    }
+
+    .headertext {
+        font-family: 'Roboto Slab', serif;
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 18px;
+        width:100%;
+        text-align:center;
+        align-content:center;
+    }
+
+    .textcenter {
+        text-align: center;
+    }
+
+    .wrapper {
+        margin: 2%;
+    }
+
+    .grid-5x5 {
+        display: grid;
+        column-gap: 5px;
+        padding: 0px;
+        text-align: center;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(5,1fr);
+    }
+    .grid-4x4 {
+        display: grid;
+        column-count: 4;
+        column-gap: 0px;
+        padding: 20px;
+        text-align: center;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .grid-2x2 {
+        display: grid;
+        column-count: 2;
+        column-gap: 5px;
+        text-align: center;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .grid-2x2-mobile {
+        display: grid;
+        column-count: 2;
+        column-gap: 5px;
+        text-align: center;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .mobilehidden{
+        display:none
+    }
+
+    .filterbutton {
+        width:40%;
+        padding: 20px;
+        align-content: center;
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .blue {
+        background-color: #98ddfe;
+    }
+
+    .yellow {
+        background-color: #fcf379;
+    }
+
+    .red {
+        background-color: #ff0000;
+    }
+
+    .editdrop {
+        padding-left: 10px;
+        width: 150px;
+        height: 30px;
+        border-radius: 10px;
+    }
+
+    .button-remove {
+        width: 50%;
+        height:50%;
+        padding: 20px;
+        align-content: center;
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+    }
+}

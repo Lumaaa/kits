@@ -1,0 +1,89 @@
+﻿@model kits.Models.product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br />
+<br />
+<br />
+<div class="wrapper">
+    <div class="grid-2x2-desktop">
+        <div>
+
+            @if (Model.image == null)
+            {
+                <img src="~/images/placeholder.jpg" class="shopimage" />
+            }
+            else
+            {
+                String imagepath = Model.image.imagestring + ".jpg";
+                <img src="~/Content/img/product/@imagepath" class="shopimage" />
+
+            }
+
+        </div>
+
+
+        <div class="text">
+
+            <div>Name</div>
+            <div>@Html.DisplayFor(model => model.product_name)</div>
+            <br />
+            <div>Description</div>
+            <div>@Html.DisplayFor(model => model.product_description)</div>
+            <br />
+
+            <div class="detailsshop">
+                <div>
+                    <div>
+                        <span>Brand: </span>
+                        <span> @Html.DisplayFor(model => model.brand.name) </span>
+                    </div>
+                    <div>
+                        <span>Category: </span>
+                        <span>@Html.DisplayFor(model => model.category.name)</span>
+                    </div>
+
+                    <div>
+                        <span>Price: </span>
+                        <span>@Html.DisplayFor(model => model.product_price)</span>
+                    </div>
+                </div>
+                <div>
+                    <span>Size </span>
+                    <span class="editdrop">
+                        @using (Html.BeginForm())
+                        {
+                            @Html.DropDownList("sizes", null, "Select size",new { @class = "editdrop" }) }
+                    </span>
+                </div>
+            </div>
+
+
+
+            
+
+
+        </div>
+    </div>
+</div>
+<div class="wrapper-button">
+    <div class="button-center">
+        @using (Html.BeginForm("AddToCart", "Cart"))
+            {
+            @Html.Hidden("ProductId", Model.product_ID)
+            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+            <input type="submit" class="button blue" value="Add to cart" />
+        }
+    </div>
+</div>
+   
+    <br />
+<br />
+<br />
+
+
+
+
+

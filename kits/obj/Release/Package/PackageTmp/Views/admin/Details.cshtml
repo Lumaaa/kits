@@ -1,0 +1,53 @@
+﻿@model kits.ViewModels.OrderDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="detailsview">
+    <div class="head">
+        <h2>Order details</h2>
+    </div>
+    <div class="detailstext">
+        <p>
+            State : @Html.DisplayFor(model => model.Order.state.name) <br />
+            User email : @Html.DisplayFor(model => model.Order.user.user_email)
+        </p>
+    </div>
+    <table class="detailstable">
+        @foreach (var orderItem in Model.OrderItems)
+        {
+            <tr>
+                <td>
+                    @if (orderItem.product.image == null)
+                    {
+                        <img src="~/images/placeholder.jpg" style="width:100px;" />
+                    }
+                    else
+                    {
+                        <img src="~/images/placeholder.jpg" style="width:100px;" />
+                        @*String imagepath = orderItem.product.image.imagestring + ".jpg";
+                            <img src="~/Content/img/product/@imagepath" alt="@orderItem.product.product_name" />*@
+                    }
+
+                </td>
+                <td>
+                    <h4>@Html.DisplayFor(modelItem => orderItem.product.product_name)</h4>
+                    <p>@Html.DisplayFor(modelItem => orderItem.product.brand.name)</p>
+                </td>
+                <td>
+                    S
+                </td>
+                <td style="text-align:right">
+                    @Html.DisplayFor(modelItem => orderItem.product.product_price) DKK
+                </td>
+            </tr>
+        }
+    </table>
+
+    <div class="detailsbuttonview">
+        <input type="button" class="edidtButtom" value="Edit" onclick="location.href='@Url.Action("Edit", new { id = Model.Order.order_ID })'" />
+        <input type="button" class="edidtButtom" value="Back to list" onclick="location.href='@Url.Action("index")'" />
+
+    </div>
+
+</div>
