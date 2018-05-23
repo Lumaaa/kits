@@ -48,10 +48,44 @@
         width: 100%;
     }
 
-    .button-center{
-        text-align:center;
-      
+    .button-center {
+        text-align: center;
+        border-radius: 10px;
     }
+
+    .button {
+        width: 100%;
+        padding: 20px;
+        align-content: center;
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+    }
+    .filterbutton {
+        width: 20%;
+        padding: 20px;
+        align-content: center;
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+    }
+    .blue {
+        background-color: #98ddfe;
+       
+    }
+    .yellow {
+        background-color: #fcf379;
+    }
+    .red {
+        background-color: #ff0000;
+    }
+    .editdrop {
+        padding-left: 10px;
+        width: 150px;
+        height: 30px;
+        border-radius: 10px;
+    }
+
 
     .details {
         display: grid;
@@ -65,13 +99,7 @@
         padding:2%;
     }
 
-    .button {
-        width: 100%;
-        padding: 20px;
-        align-content: center;
-        text-align: center;
-        border-radius: 2px;
-    }
+  
 
     .product-price-text {
         font-family: 'Roboto Slab', serif;
@@ -215,6 +243,15 @@
         grid-row-gap: 20px;
         grid-template-columns: repeat(5,1fr);
     }
+    .grid-5x5-desktop {
+        display: grid;
+        column-count: 5;
+        column-gap: 0px;
+        padding: 20px;
+        text-align: center;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(5,1fr);
+    }
     .googlemapsniklas{
         width:500px;
         height:300px;
@@ -227,6 +264,14 @@
     }
 
     .desktophidden{
-        visibility:hidden;
+        display:none;
+    }
+    .grid-2x2-desktop {
+        display: grid;
+        column-count: 2;
+        column-gap: 5px;
+        text-align: center;
+        grid-row-gap: 20px;
+        grid-template-columns: repeat(2,1fr);
     }
 }
