@@ -73,14 +73,8 @@
     <Property Name="user_firstname" Type="nvarchar" MaxLength="50" />
     <Property Name="user_lastname" Type="nvarchar" MaxLength="50" />
     <Property Name="user_phone" Type="int" />
-    <Property Name="zipcode" Type="int" />
-  </EntityType>
-  <EntityType Name="zipcode">
-    <Key>
-      <PropertyRef Name="zipcode" />
-    </Key>
-    <Property Name="zipcode" Type="int" Nullable="false" />
-    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="user_zipcode" Type="int" />
+    <Property Name="user_city" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK__orders__state_ID__534D60F1">
     <End Role="states" Type="Self.states" Multiplicity="0..1" />
@@ -166,18 +160,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__users__zipcode__5812160E">
-    <End Role="zipcode" Type="Self.zipcode" Multiplicity="0..1" />
-    <End Role="users" Type="Self.users" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="zipcode">
-        <PropertyRef Name="zipcode" />
-      </Principal>
-      <Dependent Role="users">
-        <PropertyRef Name="zipcode" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Function Name="crate_order_item" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="product_id" Type="int" Mode="In" />
     <Parameter Name="order_id" Type="int" Mode="In" />
@@ -203,7 +185,6 @@
     <EntitySet Name="product_order" EntityType="Self.product_order" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="states" EntityType="Self.states" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="zipcode" EntityType="Self.zipcode" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__orders__state_ID__534D60F1" Association="Self.FK__orders__state_ID__534D60F1">
       <End Role="states" EntitySet="states" />
       <End Role="orders" EntitySet="orders" />
@@ -231,10 +212,6 @@
     <AssociationSet Name="FK__product_o__produ__571DF1D5" Association="Self.FK__product_o__produ__571DF1D5">
       <End Role="product" EntitySet="product" />
       <End Role="product_order" EntitySet="product_order" />
-    </AssociationSet>
-    <AssociationSet Name="FK__users__zipcode__5812160E" Association="Self.FK__users__zipcode__5812160E">
-      <End Role="zipcode" EntitySet="zipcode" />
-      <End Role="users" EntitySet="users" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

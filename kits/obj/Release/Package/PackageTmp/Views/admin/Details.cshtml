@@ -1,34 +1,53 @@
-﻿@model kits.Models.order
+﻿@model kits.ViewModels.OrderDetails
 
 @{
     ViewBag.Title = "Details";
 }
+<div class="detailsview">
+    <div class="head">
+        <h2>Order details</h2>
+    </div>
+    <div class="detailstext">
+        <p>
+            State : @Html.DisplayFor(model => model.Order.state.name) <br />
+            User email : @Html.DisplayFor(model => model.Order.user.user_email)
+        </p>
+    </div>
+    <table class="detailstable">
+        @foreach (var orderItem in Model.OrderItems)
+        {
+            <tr>
+                <td>
+                    @if (orderItem.product.image == null)
+                    {
+                        <img src="~/images/placeholder.jpg" style="width:100px;" />
+                    }
+                    else
+                    {
+                        <img src="~/images/placeholder.jpg" style="width:100px;" />
+                        @*String imagepath = orderItem.product.image.imagestring + ".jpg";
+                            <img src="~/Content/img/product/@imagepath" alt="@orderItem.product.product_name" />*@
+                    }
 
-<h2>Details</h2>
+                </td>
+                <td>
+                    <h4>@Html.DisplayFor(modelItem => orderItem.product.product_name)</h4>
+                    <p>@Html.DisplayFor(modelItem => orderItem.product.brand.name)</p>
+                </td>
+                <td>
+                    S
+                </td>
+                <td style="text-align:right">
+                    @Html.DisplayFor(modelItem => orderItem.product.product_price) DKK
+                </td>
+            </tr>
+        }
+    </table>
 
-<div>
-    <h4>order</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.state.name)
-        </dt>
+    <div class="detailsbuttonview">
+        <input type="button" class="edidtButtom" value="Edit" onclick="location.href='@Url.Action("Edit", new { id = Model.Order.order_ID })'" />
+        <input type="button" class="edidtButtom" value="Back to list" onclick="location.href='@Url.Action("index")'" />
 
-        <dd>
-            @Html.DisplayFor(model => model.state.name)
-        </dd>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.user.user_email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.user.user_email)
-        </dd>
-
-    </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.order_ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

@@ -73,7 +73,8 @@
     <EntitySetMapping Name="users">
       <EntityTypeMapping TypeName="kitsModel.user">
         <MappingFragment StoreEntitySet="users">
-          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+          <ScalarProperty Name="user_city" ColumnName="user_city" />
+          <ScalarProperty Name="user_zipcode" ColumnName="user_zipcode" />
           <ScalarProperty Name="users_ID" ColumnName="users_ID" />
           <ScalarProperty Name="user_email" ColumnName="user_email" />
           <ScalarProperty Name="user_pasword" ColumnName="user_pasword" />
@@ -81,14 +82,6 @@
           <ScalarProperty Name="user_firstname" ColumnName="user_firstname" />
           <ScalarProperty Name="user_lastname" ColumnName="user_lastname" />
           <ScalarProperty Name="user_phone" ColumnName="user_phone" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="zipcodes">
-      <EntityTypeMapping TypeName="kitsModel.zipcode">
-        <MappingFragment StoreEntitySet="zipcode">
-          <ScalarProperty Name="zipcode1" ColumnName="zipcode" />
-          <ScalarProperty Name="city" ColumnName="city" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
