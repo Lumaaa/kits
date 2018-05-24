@@ -1,30 +1,19 @@
 @media only screen and (min-width : 601px) {
     header {
         width: 100%;
-        height: 75px;
-        margin-top: 10px;
+        height: 6rem;
+        margin-bottom: 1rem;
     }
 
-    .topLogo {
-        width: 100%;
-        height: 40px;
-
-    }
     .one{
         display:none;
     } 
     .logo {
-        width: 75px;
-        height: 50px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        top: 1%;
+        width: 70%;
     }
 
     nav {
         width: 94%;
-        height: 50px;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
@@ -67,6 +56,7 @@
         width: 90%;
         height:80%;
         align-items: center;
+        margin-top: 1rem;
     }
 
     .shopping {
@@ -293,5 +283,7 @@
     .det {
         background-color: #FCF379;
     }
-  
+  .cart {
+    width:3%;
+    }
 }

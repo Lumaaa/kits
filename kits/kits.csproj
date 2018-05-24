@@ -265,9 +265,11 @@
     <Content Include="Content\img\about_new.jpg" />
     <Content Include="Content\img\about__.jpg" />
     <Content Include="Content\img\basket.png" />
+    <Content Include="Content\img\cart.png" />
     <Content Include="Content\img\drycleaning.jpg" />
     <Content Include="Content\img\egaa.jpg" />
     <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\logo_new.png" />
     <Content Include="Content\img\personal\Annemette.jpg" />
     <Content Include="Content\img\personal\Annette.jpg" />
     <Content Include="Content\img\personal\caroline.jpg" />
