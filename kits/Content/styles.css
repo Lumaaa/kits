@@ -44,7 +44,7 @@ section {
 }
 
 footer {
-    margin-top: 50px;
+    margin-top: 1rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -69,13 +69,8 @@ footer {
     position: relative;
 }
 
-    .shopping img {
-    }
-
-
-    .shopping .btn {
+ .shopping .btn {
         position: absolute;
-
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #ffffff;
@@ -84,7 +79,6 @@ footer {
         padding: 12px 24px;
         border: none;
         cursor: pointer;
-        border-radius: 10px;
     }
 
         .shopping .btn:hover {
@@ -111,7 +105,6 @@ footer {
         padding: 12px 24px;
         border: none;
         cursor: pointer;
-        border-radius: 10px;
     }
 
         .about .btn:hover {
@@ -135,7 +128,6 @@ footer {
         padding: 12px 24px;
         border: none;
         cursor: pointer;
-        border-radius: 10px;
     }
 
         .service .btn:hover {

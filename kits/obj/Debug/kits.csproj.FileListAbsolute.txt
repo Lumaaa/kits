@@ -161,3 +161,4 @@ C:\Users\Norbert Nagy\Desktop\KITS\code\kits\kits\bin\Microsoft.Owin.Security.Tw
 C:\Users\Norbert Nagy\Desktop\KITS\code\kits\kits\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Norbert Nagy\Desktop\KITS\code\kits\kits\obj\Debug\kits.dll
 C:\Users\Norbert Nagy\Desktop\KITS\code\kits\kits\obj\Debug\kits.pdb
+C:\Users\Norbert Nagy\Desktop\KITS\code\kits\kits\obj\Debug\kits.csprojResolveAssemblyReference.cache

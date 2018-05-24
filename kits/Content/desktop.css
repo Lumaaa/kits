@@ -67,7 +67,6 @@
         width: 90%;
         height:80%;
         align-items: center;
-        margin-bottom:5rem;
     }
 
     .shopping {
@@ -82,12 +81,13 @@
             width: 100%;
             height: auto;
         }
-
+       
         .shopping .btn {
-            top: 30%;
+            top: 50%;
             left: 50%;
             font-size: 16px;
             padding: 12px 24px;
+            position:absolute;
         }
 
     .other {
@@ -118,10 +118,10 @@
             }
 
         .service .btn {
-            top: 60%;
+            top: 70%;
             left: 50%;
             font-size: 16px;
-            padding: 12px 24px;
+            padding: 12px 28px;
         }
 
     .about {
@@ -140,16 +140,11 @@
         }
 
         .about .btn {
-            top: 50%;
+            top: 30%;
             left: 50%;
             font-size: 16px;
-            padding: 12px 24px;
+            padding: 12px 32px;
         }
-
-    footer {
-        height: 50px;
-        position:fixed;
-    }
 
     /*burger menu*/
     #menuToggle {
@@ -298,4 +293,5 @@
     .det {
         background-color: #FCF379;
     }
+  
 }
