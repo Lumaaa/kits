@@ -1,30 +1,19 @@
 @media only screen and (min-width : 601px) {
     header {
         width: 100%;
-        height: 75px;
-        margin-top: 10px;
+        height: 6rem;
+        margin-bottom: 1rem;
     }
 
-    .topLogo {
-        width: 100%;
-        height: 40px;
-
-    }
     .one{
         display:none;
     } 
     .logo {
-        width: 75px;
-        height: 50px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        top: 1%;
+        width: 70%;
     }
 
     nav {
         width: 94%;
-        height: 50px;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
@@ -64,30 +53,31 @@
     .frontpage {
         display: inline-flex;
         flex-direction: row;
-        height: 425px;
-        width: 500px;
+        width: 90%;
+        height:80%;
         align-items: center;
-        margin-bottom:5rem;
+        margin-top: 1rem;
     }
 
     .shopping {
         flex-grow: 1;
         align-self: flex-start;
-        height: 400px;
-        width: 250px;
+        width: 65%;
         margin-left: 0;
+        margin-right:0.5rem;
     }
 
         .shopping img {
             width: 100%;
             height: auto;
         }
-
+       
         .shopping .btn {
-            top: 30%;
+            top: 50%;
             left: 50%;
             font-size: 16px;
             padding: 12px 24px;
+            position:absolute;
         }
 
     .other {
@@ -95,22 +85,22 @@
         display: flex;
         flex-direction: column;
         align-self: flex-start;
-        height: 400px;
-        width: 200px;
-        margin-left: 5px;
+        width: 35%;
+        margin-left:0.5rem;
     }
 
     .service {
         flex-grow: 1;
         align-self: flex-start;
-        height: 193px;
-        width: 180px;
+        height: 50%;
+        width: 100%;
         margin-left: 0;
+        margin-bottom:1rem;
     }
 
         .service img {
-            width: 160px;
-            height: 195px;
+            width: 100%;
+            height: 100%;
         }
 
             .service img :hover {
@@ -118,38 +108,33 @@
             }
 
         .service .btn {
-            top: 60%;
-            left: 45%;
+            top: 70%;
+            left: 50%;
             font-size: 16px;
-            padding: 12px 24px;
+            padding: 12px 28px;
         }
 
     .about {
         flex-grow: 2;
         align-self: flex-start;
-        height: 180px;
-        width: 200px;
+        height: 50%;
+        width: 100%;
         padding-top: -px;
     }
 
         .about img {
-            width: 160px;
-            height: 195px;
+            width: 100%;
+            height: 50%;
             /*margin: -0% 0 0 -14%;*/
             top: 0;
         }
 
         .about .btn {
-            top: 50%;
-            left: 45%;
+            top: 30%;
+            left: 50%;
             font-size: 16px;
-            padding: 12px 24px;
+            padding: 12px 32px;
         }
-
-    footer {
-        height: 50px;
-        position:fixed;
-    }
 
     /*burger menu*/
     #menuToggle {
@@ -297,5 +282,8 @@
 
     .det {
         background-color: #FCF379;
+    }
+  .cart {
+    width:3%;
     }
 }

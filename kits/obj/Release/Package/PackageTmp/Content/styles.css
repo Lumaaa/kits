@@ -44,7 +44,7 @@ section {
 }
 
 footer {
-    margin-top: 50px;
+    margin-top: 1rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -56,8 +56,6 @@ footer {
     bottom: 0;
     left: 0;
     padding: 1rem;
-    /*bottom: 0;*/
-    /*position:absolute;*/
 }
 
     footer a {
@@ -69,17 +67,8 @@ footer {
     position: relative;
 }
 
-    .shopping img {
-        border: solid #000000;
-    }
-
-        .shopping img:hover {
-            background-color: #ddd;
-        }
-
-    .shopping .btn {
+ .shopping .btn {
         position: absolute;
-
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         background-color: #ffffff;
@@ -88,7 +77,6 @@ footer {
         padding: 12px 24px;
         border: none;
         cursor: pointer;
-        border-radius: 10px;
     }
 
         .shopping .btn:hover {
@@ -103,8 +91,6 @@ footer {
 }
 
     .about img {
-        height: auto;
-        border: solid #000000;
     }
 
     .about .btn {
@@ -117,7 +103,6 @@ footer {
         padding: 12px 24px;
         border: none;
         cursor: pointer;
-        border-radius: 10px;
     }
 
         .about .btn:hover {
@@ -126,13 +111,9 @@ footer {
 
 .service {
     position: relative;
- 
 }
 
     .service img {
-
-        height: auto;
-        border: solid #000000;
     }
 
     .service .btn {
@@ -145,7 +126,6 @@ footer {
         padding: 12px 24px;
         border: none;
         cursor: pointer;
-        border-radius: 10px;
     }
 
         .service .btn:hover {

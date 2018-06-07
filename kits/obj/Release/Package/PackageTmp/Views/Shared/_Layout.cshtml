@@ -14,7 +14,7 @@
         <header>
 
             <a class="topLogo one" href="@Url.Action("Index", "Home")">
-                <img src="~/Content/img/logo.png" alt="logo" class='logo' />
+                <img src="~/Content/img/logo_new.png" alt="logo" class='logo' />
             </a>
 
             <nav role="navigation">
@@ -28,34 +28,34 @@
                         <li> @Html.ActionLink("Shop", "Index", "products")</li>
                         <li>@Html.ActionLink("About", "About", "Home")</li>
                         <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     </ul>
                 </div>
 
                 <ul class="navbar">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li> @Html.ActionLink("Shop", "Index", "products")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>
                         <a class="topLogo" href="@Url.Action("Index", "Home")">
-                            <img src="~/Content/img/logo.png" alt="logo" class='logo' />
+                            <img src="~/Content/img/logo_new.png" alt="logo" class='logo' />
                         </a>
                     </li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Services", "Services", "Home")</li>
-                    <li>
-                        <span class='basket'>
-                            <a href="@Url.Action("Index", "Cart")">
-                                <i class="fas fa-shopping-basket fa-1x"></i>
-                            </a>
-                        </span>
-                    </li>
+
+                    <span class="basket">
+                        <a href="@Url.Action("Index", "Cart")">
+                            <img src="~/Content/img/cart.png" alt="cart" class='cart' />
+                        </a>
+                    </span>
                 </ul>
+                
             </nav>
 
-            <span class='basket one'>
+            <span class="basket one">
                 <a href="@Url.Action("Index", "Cart")">
-                    <i class="fas fa-shopping-basket fa-1x"></i>
-                    <i class="fas fa-shopping-basket fa-2x"></i>
-                    <i class="fas fa-shopping-basket fa-3x"></i>
+                    <img src="~/Content/img/cart.png" alt="cart" class='cart' />
                 </a>
             </span>
 
